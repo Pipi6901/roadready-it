@@ -23,13 +23,14 @@ import type { ContentBundle, Country, Locale } from '@/types/content';
 /**
  * Where published content comes from.
  *
- * This must point at the POLISH project's Hosting site. It was inherited from
- * the British repository still pointing at `roadready-80e53`, which meant the
- * Polish build fetched the British bundle and applied it whole — country,
- * questions, topics and locales — turning itself into the UK app on its first
- * online launch. The guard below is the belt to this braces.
+ * This must point at the ITALIAN project's Hosting site. The British URL was
+ * once inherited by the Polish fork, which then fetched the British bundle and
+ * applied it whole — country, questions, topics and locales — turning itself
+ * into the UK app on its first online launch. The guard below is the belt to
+ * this braces, and it is why EXPECTED_COUNTRY is changed in the same breath as
+ * this line, never separately.
  */
-const CONTENT_URL = 'https://roadready-pl.web.app/content.json';
+const CONTENT_URL = 'https://roadready-it.web.app/content.json';
 
 /**
  * The country this build ships for. A payload for anyone else is refused.

@@ -1,0 +1,15 @@
+{
+  "code": "IT",
+  "name": "Italia",
+  "flagEmoji": "🇮🇹",
+  "authority": "Motorizzazione Civile",
+  "legalNotice": "Le domande provengono dal listato ufficiale pubblicato dal Ministero delle Infrastrutture e dei Trasporti su il Portale dell'Automobilista. La suddivisione in argomenti segue quella ministeriale. Traduzioni e spiegazioni sono a cura di RoadReady. RoadReady non è affiliata al Ministero né alla Motorizzazione Civile.",
+  "status": "active",
+  "mockTest": {
+    "questionCount": 30,
+    "timeLimitMinutes": 20,
+    "passMark": 27,
+    "allowReview": true
+  },
+  "currency": "EUR"
+}
