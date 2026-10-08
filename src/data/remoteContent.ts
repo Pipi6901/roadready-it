@@ -39,7 +39,7 @@ const CONTENT_URL = 'https://roadready-pl.web.app/content.json';
  * fail closed on the bundled seed rather than replacing the exam a candidate
  * is preparing for.
  */
-const EXPECTED_COUNTRY = 'PL';
+const EXPECTED_COUNTRY = 'IT';
 
 interface RemoteContentPayload extends ContentBundle {
   countries: Country[];

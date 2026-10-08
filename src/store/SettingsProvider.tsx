@@ -1,6 +1,8 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 
-import { deviceUiLocale, findLocale, findUiLocale, isExamLanguage } from '@/features/i18n/locales';
+import {
+  deviceUiLocale, findLocale, findUiLocale, isExamLanguage, ORIGINAL_LOCALE,
+} from '@/features/i18n/locales';
 import { cancelDailyReminder, hasNotificationPermission, scheduleDailyReminder } from '@/features/notifications/reminders';
 import { KEYS, load, save } from './storage';
 
@@ -64,8 +66,8 @@ export interface Settings {
 
 const DEFAULTS: Settings = {
   onboarded: false,
-  countryCode: 'PL',
-  questionLocale: 'pl',
+  countryCode: 'IT',
+  questionLocale: ORIGINAL_LOCALE,
   localeCode: null,
   licenceCategory: 'B',
   licenceChosen: false,
@@ -193,7 +195,7 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const value = useMemo<SettingsContextValue>(() => {
-    const questionLocale = isExamLanguage(settings.questionLocale) ? settings.questionLocale : 'pl';
+    const questionLocale = isExamLanguage(settings.questionLocale) ? settings.questionLocale : ORIGINAL_LOCALE;
     // Only a language the exam cannot be sat in can be the second line: the
     // other three are shown alone, the way Polish always has been.
     const locale = isExamLanguage(settings.localeCode) ? null : findLocale(settings.localeCode);

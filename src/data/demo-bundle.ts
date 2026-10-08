@@ -20,52 +20,42 @@ import { PL_BANK_TRANSLATIONS, PL_QUESTIONS } from './pl-bank';
 /* Countries                                                                   */
 /* -------------------------------------------------------------------------- */
 
-const POLAND: Country = {
-  code: 'PL',
-  name: 'Polska',
-  flagEmoji: '🇵🇱',
-  authority: 'WORD',
-  // TODO: rewrite once the official Ministerstwo Infrastruktury catalogue is
-  // loaded. Until then this bank is written in-house, and the notice has to
-  // say so rather than borrow the authority of the real one.
+const ITALY: Country = {
+  code: 'IT',
+  name: 'Italia',
+  flagEmoji: '🇮🇹',
+  // The exam is sat at the Motorizzazione Civile (UMC), which is also what a
+  // candidate calls the place, so that is the name the app uses rather than
+  // the ministry's.
+  authority: 'Motorizzazione Civile',
+  // TODO: rewrite once the ministerial listato is imported. Until then the
+  // bundled seed is still the Polish demo bank, and the notice must not claim
+  // an authority the content does not yet have.
   legalNotice:
-    'Pytania w aplikacji sa opracowane niezaleznie przez RoadReady na podstawie opublikowanych przepisow ruchu drogowego i nie sa pytaniami egzaminacyjnymi zadnego urzedu. Aplikacja nie jest powiazana z WORD.',
+    'Le domande di questa versione di prova sono scritte da RoadReady e non sono quesiti d\'esame di alcun ente. RoadReady non e affiliata al Ministero delle Infrastrutture e dei Trasporti ne alla Motorizzazione Civile.',
   status: 'active',
   // Patched below to QUESTIONS.length once that array exists.
   questionCount: 0,
   mockTest: {
-    questionCount: 32,
-    timeLimitMinutes: 25,
-    // Points, not answers: 20 basic + 12 specialist questions weighted 1-3
-    // add up to 74, and 68 of them are needed. Six points of slack means two
-    // or three mistakes depending on which questions they land on.
-    passMark: 68,
-    maxPoints: 74,
-    timing: {
-      basic: { readSeconds: 20, answerSeconds: 15 },
-      specialist: { readSeconds: 0, answerSeconds: 50 },
-    },
-    composition: { basic: 20, specialist: 12 },
-    // Fixed by regulation, and the reason a paper cannot be sampled at random:
-    // 10x3 + 6x2 + 4x1 = 46 basic points, 6x3 + 4x2 + 2x1 = 28 specialist,
-    // 74 in total. Change any cell and the pass mark of 68 stops meaning
-    // anything.
-    weights: {
-      basic: { '3': 10, '2': 6, '1': 4 },
-      specialist: { '3': 6, '2': 4, '1': 2 },
-    },
-    // The Polish exam moves forward only.
-    allowReview: false,
+    // DM 27 ottobre 2021, in force since 20 December 2021 for A1, A2, A, B1,
+    // B and BE: thirty true/false statements, twenty minutes, three errors.
+    questionCount: 30,
+    timeLimitMinutes: 20,
+    // Answers, not points: Italy weights nothing, so `maxPoints` is absent and
+    // the bar is simply 30 minus the three errors the decree allows.
+    passMark: 27,
+    // No `timing`: the twenty minutes cover the whole scheda, there is no
+    // per-question clock. No `composition` or `weights`: one class of
+    // question, drawn at random from the 25 chapters of the listato.
+    //
+    // The candidate may move freely through the scheda and change an answer
+    // until the paper is submitted, which is the opposite of Poland.
+    allowReview: true,
   },
-  currency: 'PLN',
+  currency: 'EUR',
 };
 
-/**
- * One country per app build (ADR-013). The British list lived here while the
- * app still had a country picker; this build is Poland's, and the picker is
- * off, so carrying six inactive entries would only invite them to drift.
- */
-export const COUNTRIES: Country[] = [POLAND];
+export const COUNTRIES: Country[] = [ITALY];
 
 /* -------------------------------------------------------------------------- */
 /* Locales                                                                     */
@@ -406,14 +396,14 @@ for (const topic of TOPICS) {
   topic.questionCount = QUESTIONS.filter((q) => q.topicId === topic.id).length;
 }
 
-POLAND.questionCount = QUESTIONS.length;
+ITALY.questionCount = QUESTIONS.length;
 
 /* -------------------------------------------------------------------------- */
 /* Bundle                                                                      */
 /* -------------------------------------------------------------------------- */
 
 export const DEMO_BUNDLE: ContentBundle = {
-  country: POLAND,
+  country: ITALY,
   topics: TOPICS,
   questions: QUESTIONS,
   // One catalogue per translation language in LOCALES, keyed by question id.

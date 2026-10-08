@@ -2,6 +2,7 @@ import React, { createContext, useCallback, useContext, useEffect, useMemo } fro
 
 import { COUNTRIES, DEMO_BUNDLE } from '@/data/demo-bundle';
 import { initRemoteContent, remoteContentStore } from '@/data/remoteContent';
+import { ORIGINAL_LOCALE } from '@/features/i18n/locales';
 import { topicName } from '@/features/i18n/topicNames';
 import { LESSON_SIZE } from '@/constants/rules';
 import {
@@ -31,7 +32,7 @@ import { useSubscription } from './SubscriptionProvider';
  */
 
 /**
- * The question as the catalogue wrote it: Polish, in the shape a translation
+ * The question as the catalogue wrote it: Italian, in the shape a translation
  * has, so the two can be used interchangeably below.
  */
 function polishOf(q: Question): QuestionTranslation {
@@ -44,7 +45,7 @@ function polishOf(q: Question): QuestionTranslation {
 
 /** One language of a question, or null if the bundle does not carry it. */
 function translationOf(q: Question, locale: string, source: QuestionTranslation) {
-  return locale === 'pl' ? source : (DEMO_BUNDLE.translations[locale]?.[q.id] ?? null);
+  return locale === ORIGINAL_LOCALE ? source : (DEMO_BUNDLE.translations[locale]?.[q.id] ?? null);
 }
 
 interface ContentContextValue {
@@ -112,7 +113,7 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
           text: base.options?.[o.id] ?? source.options[o.id] ?? o.text,
         })),
         explanation: base.explanation || source.explanation,
-        textLocale: base === source ? 'pl' : questionLocale,
+        textLocale: base === source ? ORIGINAL_LOCALE : questionLocale,
         translation,
         media: q.mediaId ? (DEMO_BUNDLE.media[q.mediaId] ?? null) : null,
       };

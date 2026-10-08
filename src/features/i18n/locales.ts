@@ -4,13 +4,13 @@
  * Distinct from the translation languages in `LOCALES` (src/data/demo-bundle.ts),
  * which decide what appears *under* a question. This list decides what the app
  * itself says — buttons, settings, results — and the two are chosen separately
- * on purpose: someone sitting the exam in Polish may still want the app in
- * Ukrainian, and someone comfortable in Polish may want no translation at all.
+ * on purpose: someone sitting the exam in Italian may still want the app in
+ * Romanian, and someone comfortable in Italian may want no translation at all.
  *
- * Polish is here for the same reason it is not in LOCALES: content.json has
- * no Polish translation catalogue because Polish is the original the
+ * Italian is here for the same reason it is not in LOCALES: content.json has
+ * no Italian translation catalogue because Italian is the original the
  * questions are written in — but it is a perfectly ordinary choice for the
- * interface, and POLISH_LOCALE below puts it back into the question and
+ * interface, and ITALIAN_LOCALE below puts it back into the question and
  * translation pickers, where it is a choice like any other.
  */
 import { LOCALES } from '@/data/demo-bundle';
@@ -24,21 +24,21 @@ export interface UiLocale {
 }
 
 export const UI_LOCALES: UiLocale[] = [
-  { code: 'pl', nameNative: 'Polski', nameEnglish: 'Polish', flagEmoji: '🇵🇱' },
-  { code: 'uk', nameNative: 'Українська', nameEnglish: 'Ukrainian', flagEmoji: '🇺🇦' },
-  { code: 'ru', nameNative: 'Русский', nameEnglish: 'Russian', flagEmoji: '🇷🇺' },
-  { code: 'en', nameNative: 'English', nameEnglish: 'English', flagEmoji: '🇬🇧' },
-  { code: 'de', nameNative: 'Deutsch', nameEnglish: 'German', flagEmoji: '🇩🇪' },
-  { code: 'es', nameNative: 'Español', nameEnglish: 'Spanish', flagEmoji: '🇪🇸' },
-  { code: 'tr', nameNative: 'Türkçe', nameEnglish: 'Turkish', flagEmoji: '🇹🇷' },
+  { code: 'it', nameNative: 'Italiano', nameEnglish: 'Italian', flagEmoji: '\u{1F1EE}\u{1F1F9}' },
+  { code: 'ro', nameNative: 'Rom\u00e2n\u0103', nameEnglish: 'Romanian', flagEmoji: '\u{1F1F7}\u{1F1F4}' },
+  { code: 'sq', nameNative: 'Shqip', nameEnglish: 'Albanian', flagEmoji: '\u{1F1E6}\u{1F1F1}' },
+  { code: 'ar', nameNative: '\u0627\u0644\u0639\u0631\u0628\u064a\u0629', nameEnglish: 'Arabic', flagEmoji: '\u{1F1F2}\u{1F1E6}' },
+  { code: 'uk', nameNative: '\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430', nameEnglish: 'Ukrainian', flagEmoji: '\u{1F1FA}\u{1F1E6}' },
+  { code: 'es', nameNative: 'Espa\u00f1ol', nameEnglish: 'Spanish', flagEmoji: '\u{1F1EA}\u{1F1F8}' },
+  { code: 'en', nameNative: 'English', nameEnglish: 'English', flagEmoji: '\u{1F1EC}\u{1F1E7}' },
 ];
 
 /**
  * The language the app falls back to.
  *
- * English rather than Polish, even though this is a Polish-market app: the
- * audience is largely people who do not read Polish yet — that gap is the whole
- * product — so defaulting the interface to Polish would greet exactly the wrong
+ * English rather than Italian, even though this is an Italian-market app: the
+ * audience is largely people who do not read Italian yet — that gap is the whole
+ * product — so defaulting the interface to Italian would greet exactly the wrong
  * user with a wall of the language they came here not knowing.
  */
 export const FALLBACK_UI_LOCALE = 'en';
@@ -78,7 +78,8 @@ export function dateLocaleFor(uiLocaleCode: string): string {
 }
 
 const BCP47: Record<string, string> = {
-  pl: 'pl-PL', uk: 'uk-UA', ru: 'ru-RU', en: 'en-GB', de: 'de-DE', es: 'es-ES', tr: 'tr-TR',
+  it: 'it-IT', ro: 'ro-RO', sq: 'sq-AL', ar: 'ar-EG', uk: 'uk-UA', en: 'en-GB',
+  de: 'de-DE', fr: 'fr-FR', es: 'es-ES', ru: 'ru-RU', pl: 'pl-PL', tr: 'tr-TR',
 };
 
 /** Full BCP-47 tag for a bare language code — dates, and the speech engine. */
@@ -87,47 +88,55 @@ export function bcp47For(code: string): string {
 }
 
 /**
- * The languages the Polish theory exam is actually sat in.
+ * The languages the Italian theory exam is actually sat in.
  *
- * Article 51 of the driving-licence act lets a candidate take the exam in
- * Polish, English, German or Ukrainian, and the ministry publishes the
- * catalogue in all four. For those the app shows the question in that language
- * ALONE: it is the wording the candidate will meet at WORD, so putting Polish
- * above it would be showing them a language they will never have to read.
+ * Italian everywhere, plus German in the province of Bolzano and French in
+ * Valle d'Aosta, which are the only two places the ministry prints the scheda
+ * in anything else. The quizzes in English, Spanish, Arabic, Russian and
+ * Chinese were withdrawn in 2016, and that withdrawal is the whole reason this
+ * app exists: a candidate who does not read technical Italian has no official
+ * way around it any more.
  *
- * Every other language in LOCALES is a study aid. There the Polish stays on
- * top and the translation sits underneath, because on the day the paper will
- * be in Polish whatever the app showed.
+ * For those three the question is shown ALONE, because it is the wording the
+ * candidate will meet at the Motorizzazione. Every other language in LOCALES is
+ * a study aid and sits underneath the Italian.
  *
  * Not in content.json on purpose: remoteContent replaces the locale list
  * wholesale on every publish, and which languages a state exam accepts is a
  * fact about the exam, not about a content bundle.
  */
-export const EXAM_LANGUAGES = ['pl', 'en', 'de', 'uk'] as const;
+export const EXAM_LANGUAGES = ['it', 'de', 'fr'] as const;
 
 export function isExamLanguage(code: string | null | undefined): boolean {
   return !!code && (EXAM_LANGUAGES as readonly string[]).includes(code);
 }
 
 /**
- * Polish as an entry in the language lists.
+ * Italian as an entry in the language lists.
  *
  * It is absent from LOCALES because content.json carries a translation
- * catalogue per locale and Polish is the original, not a translation — but
+ * catalogue per locale and Italian is the original, not a translation — but
  * both pickers need it as a choice: as the language the exam is sat in, and
- * as the line underneath when the exam is sat in one of the other three.
+ * as the line underneath when the exam is sat in German or French.
  */
-export const POLISH_LOCALE: Locale = {
-  code: 'pl',
-  nameNative: 'Polski',
-  nameEnglish: 'Polish',
+/**
+ * The language the catalogue itself is written in. Everything else in LOCALES
+ * is a translation of it, and the code asks this constant rather than carrying
+ * the literal around — forking the app to another country is then one edit.
+ */
+export const ORIGINAL_LOCALE = 'it';
+
+export const ITALIAN_LOCALE: Locale = {
+  code: ORIGINAL_LOCALE,
+  nameNative: 'Italiano',
+  nameEnglish: 'Italian',
   direction: 'ltr',
-  flagEmoji: '🇵🇱',
+  flagEmoji: '🇮🇹',
 };
 
-/** Every language a question can be shown in, Polish included. */
+/** Every language a question can be shown in, Italian included. */
 export function allLocales(): Locale[] {
-  return [POLISH_LOCALE, ...LOCALES];
+  return [ITALIAN_LOCALE, ...LOCALES];
 }
 
 export function findLocale(code: string | null | undefined): Locale | null {
@@ -137,7 +146,7 @@ export function findLocale(code: string | null | undefined): Locale | null {
 
 /**
  * The languages the exam can be sat in, in the order the pickers show them:
- * Polish first because it is the original and the default, then whichever of
+ * Italian first because it is the original and the default, then whichever of
  * the others the content bundle actually carries.
  */
 export function examLocales(): Locale[] {

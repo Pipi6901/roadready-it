@@ -21,7 +21,7 @@ export const ONBOARDING_ENABLED = true;
  *
  * OFF (ADR-013): the product now ships one country per app build instead of
  * one app covering many countries — this build is Poland-only. `countryCode`
- * stays hardcoded to `'PL'` (see ONBOARDING_SKIP_DEFAULTS and
+ * stays hardcoded to `'IT'` (see ONBOARDING_SKIP_DEFAULTS and
  * SettingsProvider's DEFAULTS). Unlike the other flags here, this one isn't
  * expected to flip back to `true` in this codebase — a second country means a
  * new app, not a re-enabled picker — but the screens stay in place in case
@@ -55,7 +55,7 @@ export const HAZARD_ENABLED = false;
 
 /** Defaults applied when onboarding is skipped. */
 export const ONBOARDING_SKIP_DEFAULTS = {
-  countryCode: 'PL',
+  countryCode: 'IT',
   /** null = "Polish only (no translation)". */
   localeCode: null as string | null,
 } as const;
