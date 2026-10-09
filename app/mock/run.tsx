@@ -234,11 +234,6 @@ export default function MockRunScreen() {
           </Txt>
         ) : null}
 
-        {canGoBack ? null : (
-          <Txt size={12} color={t.colors.textSecondary} align="center">
-            {tr('mock.oneWay')}
-          </Txt>
-        )}
       </ScreenScroll>
 
       <View style={{ gap: 8, paddingHorizontal: 20, paddingTop: 14, paddingBottom: 20 }}>

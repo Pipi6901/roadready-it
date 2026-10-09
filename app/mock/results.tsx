@@ -90,7 +90,7 @@ export default function MockResultsScreen() {
           >
             <Icon name={attempt.passed ? 'circle-check' : 'circle-x'} size={16} color={verdictColor} />
             <Txt size={14} weight="700" color={verdictColor}>
-              {attempt.passed ? 'Passed!' : 'Not passed'}
+              {attempt.passed ? tr('mock.passed') : tr('mock.notPassed')}
             </Txt>
           </Row>
 

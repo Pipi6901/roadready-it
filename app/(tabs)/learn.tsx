@@ -16,8 +16,6 @@ import { useProgress } from '@/store/ProgressProvider';
 import { useTheme } from '@/theme/ThemeProvider';
 
 const SCREEN_PADDING = 20;
-/** Extra vertical room on the trail where the question class changes. */
-const SECTION_GAP = 64;
 /** TopicNode's label metrics, which the row pitch is measured against. A
  *  fixed pitch could not work: "Piesi, rowerzyści, przejazdy kolejowe" is
  *  three lines and "Ekologia" is one, so whatever spacing suited the short
@@ -120,11 +118,6 @@ export default function LearnScreen() {
     return stats.map(({ topic, stat }, i) => {
       const state = states[i];
 
-      // The route runs through the basic sections first and the specialist
-      // ones after, because that is the order of the paper itself. Where the
-      // class changes the trail gets extra room for a marker: the candidate
-      // should be able to see, while scrolling, that the exam has two halves.
-      const startsSpecialist = i > 0 && stats[i - 1].topic.category !== topic.category;
       if (i > 0) {
         // Measured, not fixed: whatever the label above actually needs, plus
         // air, plus this node's own top half.
@@ -134,7 +127,6 @@ export default function LearnScreen() {
           ROW_BREATH +
           pseudoRandom(i * 3.17 + 11) * PITCH_JITTER +
           halfNode(state);
-        if (startsSpecialist) y += SECTION_GAP;
       }
       const offset = i === 0 ? 0 : Math.round(
         prevOffset * 0.35 + (pseudoRandom(i * 7.31 + 1) * 2 - 1) * MAX_OFFSET * 0.65,
@@ -145,7 +137,6 @@ export default function LearnScreen() {
         topic,
         stat,
         state,
-        startsSpecialist,
         x: centreX + offset,
         y,
       };
@@ -216,29 +207,6 @@ export default function LearnScreen() {
               {/* Class marker. Not decoration: 12 of the 32 questions on the
                   paper come from below this line, and they are scored and
                   timed differently from the ones above it. */}
-              {nodes.map((n) =>
-                n.startsSpecialist ? (
-                  <View
-                    key={`${n.topic.id}-divider`}
-                    style={{
-                      position: 'absolute',
-                      left: 0,
-                      right: 0,
-                      top: n.y - NODE_SIZE / 2 - SECTION_GAP + 10,
-                      alignItems: 'center',
-                      gap: 2,
-                    }}
-                  >
-                    <Txt size={13} weight="700" color={t.colors.onSurfaceAlt}>
-                      {tr('learn.specialistSection')}
-                    </Txt>
-                    <Txt size={11} color={t.colors.textSecondary}>
-                      {tr('learn.specialistHint')}
-                    </Txt>
-                  </View>
-                ) : null,
-              )}
-
               {nodes.map((n, i) => {
                 const decor = [DECORATIONS[i % DECORATIONS.length], DECORATIONS[(i + 2) % DECORATIONS.length]];
                 const rowTop = n.y - NODE_SIZE / 2;

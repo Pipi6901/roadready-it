@@ -35,7 +35,7 @@ import { useSubscription } from './SubscriptionProvider';
  * The question as the catalogue wrote it: Italian, in the shape a translation
  * has, so the two can be used interchangeably below.
  */
-function polishOf(q: Question): QuestionTranslation {
+function originalOf(q: Question): QuestionTranslation {
   return {
     text: q.text,
     options: Object.fromEntries(q.options.map((o) => [o.id, o.text])),
@@ -87,19 +87,19 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
   );
 
   // The second line only. The first one is not gated: reading the paper in
-  // one of the four languages the exam is actually sat in is the exam, not a
-  // feature, and a learner who will answer in English should never be shown
-  // Polish because they have not paid.
+  // one of the languages the exam is actually sat in is the exam, not a
+  // feature, and a learner who will answer in German should never be shown
+  // Italian because they have not paid.
   const showTranslation = !!localeCode && localeCode !== questionLocale && can('translation');
 
   const decorate = useCallback(
     (q: Question): DisplayQuestion => {
       // Screens re-decorate questions they are already holding — the lesson
       // queue is frozen at mount and decorated afresh on every render — so the
-      // Polish has to be carried along rather than read back off `text`, which
+      // original has to be carried along rather than read back off `text`, which
       // by then may be in any of the four languages. Without this, picking
       // Polish as the second line showed the first line twice.
-      const source = 'source' in q ? (q as DisplayQuestion).source : polishOf(q);
+      const source = 'source' in q ? (q as DisplayQuestion).source : originalOf(q);
       const base = translationOf(q, questionLocale, source) ?? source;
       const translation = showTranslation ? translationOf(q, localeCode!, source) : null;
       return {

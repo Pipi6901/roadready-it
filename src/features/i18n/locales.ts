@@ -24,13 +24,12 @@ export interface UiLocale {
 }
 
 export const UI_LOCALES: UiLocale[] = [
-  { code: 'it', nameNative: 'Italiano', nameEnglish: 'Italian', flagEmoji: '\u{1F1EE}\u{1F1F9}' },
-  { code: 'ro', nameNative: 'Rom\u00e2n\u0103', nameEnglish: 'Romanian', flagEmoji: '\u{1F1F7}\u{1F1F4}' },
-  { code: 'sq', nameNative: 'Shqip', nameEnglish: 'Albanian', flagEmoji: '\u{1F1E6}\u{1F1F1}' },
-  { code: 'ar', nameNative: '\u0627\u0644\u0639\u0631\u0628\u064a\u0629', nameEnglish: 'Arabic', flagEmoji: '\u{1F1F2}\u{1F1E6}' },
-  { code: 'uk', nameNative: '\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430', nameEnglish: 'Ukrainian', flagEmoji: '\u{1F1FA}\u{1F1E6}' },
-  { code: 'es', nameNative: 'Espa\u00f1ol', nameEnglish: 'Spanish', flagEmoji: '\u{1F1EA}\u{1F1F8}' },
-  { code: 'en', nameNative: 'English', nameEnglish: 'English', flagEmoji: '\u{1F1EC}\u{1F1E7}' },
+  { code: 'it', nameNative: 'Italiano', nameEnglish: 'Italian', flagEmoji: '🇮🇹' },
+  { code: 'ro', nameNative: 'Română', nameEnglish: 'Romanian', flagEmoji: '🇷🇴' },
+  { code: 'ar', nameNative: 'العربية', nameEnglish: 'Arabic', flagEmoji: '🇲🇦' },
+  { code: 'uk', nameNative: 'Українська', nameEnglish: 'Ukrainian', flagEmoji: '🇺🇦' },
+  { code: 'zh', nameNative: '中文', nameEnglish: 'Chinese', flagEmoji: '🇨🇳' },
+  { code: 'en', nameNative: 'English', nameEnglish: 'English', flagEmoji: '🇬🇧' },
 ];
 
 /**
@@ -78,8 +77,9 @@ export function dateLocaleFor(uiLocaleCode: string): string {
 }
 
 const BCP47: Record<string, string> = {
-  it: 'it-IT', ro: 'ro-RO', sq: 'sq-AL', ar: 'ar-EG', uk: 'uk-UA', en: 'en-GB',
-  de: 'de-DE', fr: 'fr-FR', es: 'es-ES', ru: 'ru-RU', pl: 'pl-PL', tr: 'tr-TR',
+  it: 'it-IT', ro: 'ro-RO', ar: 'ar-EG', uk: 'uk-UA', zh: 'zh-CN', en: 'en-GB',
+  // German and French are exam languages in the autonomous provinces.
+  de: 'de-DE', fr: 'fr-FR',
 };
 
 /** Full BCP-47 tag for a bare language code — dates, and the speech engine. */

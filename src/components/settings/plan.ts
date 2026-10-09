@@ -7,12 +7,14 @@ import type { Plan, SubscriptionState } from '@/store/SubscriptionProvider';
  * TODO: replace with the localised price once real product IDs exist.
  */
 export const PLAN_PRICE: Record<Plan, string> = {
-  // Placeholder złoty prices until the App Store Connect products exist —
-  // in the band the Polish competitors sit in (GO 29 zł/month, Jezak 29.99 zł
-  // one-off). The British figures that were here would have read as a
+  // Placeholder euro prices until the App Store Connect products exist. The
+  // Italian quiz market is almost entirely free and ad-funded, so the bet here
+  // is not on the questions — those are the ministry's and everyone has them —
+  // but on the translation, and the figure has to stay low enough that a
+  // learner tries it. The złoty figures that were here would have read as a
   // foreign app the moment anyone opened Settings.
-  monthly: '24,99 zł',
-  yearly: '89,99 zł',
+  monthly: '6,99 €',
+  yearly: '55,99 €',
 };
 
 export const PLAN_PERIOD: Record<Plan, string> = {

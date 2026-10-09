@@ -1,178 +1,46 @@
 /**
  * Section names, per interface language.
  *
- * The names live here and not in content.json for the same reason the section
- * list itself is ours: the regulation fixes the question classes, the weights
- * and the counts, but it publishes no thematic taxonomy — these 23 headings
- * are a product decision, which makes them interface copy that happens to be
- * keyed by topic id. Translating them in the bundle would mean a publish for
- * every wording change and a translation catalogue per locale for 23 strings.
+ * The names live here and not in content.json because the app shows them in
+ * the INTERFACE language while the bundle carries only the ministry's Italian.
+ * An id with no entry reads in Italian, which is the right fallback: that is
+ * what the listato calls it.
  *
- * Polish is the fallback and is deliberately absent: it is what the bundle
- * already carries, so an id with no entry here (a topic added by a later
- * publish) reads in Polish rather than as a blank.
+ * Italian is deliberately absent — it is already in the bundle.
  */
 type TopicNames = Record<string, string>;
 
 const EN: TopicNames = {
-  'zasady-ogolne': 'General rules and definitions',
-  'znaki-ostrzegawcze': 'Warning signs',
-  'znaki-zakazu': 'Prohibition signs',
-  'znaki-nakazu': 'Mandatory signs',
-  'znaki-informacyjne': 'Information and direction signs',
-  'znaki-poziome': 'Road markings and plates',
-  sygnalizacja: 'Traffic lights and signals',
-  pierwszenstwo: 'Right of way and junctions',
-  'wlaczanie-zmiana': 'Joining traffic and changing direction',
-  wyprzedzanie: 'Overtaking and passing',
-  predkosc: 'Speed and distances',
-  'zatrzymanie-postoj': 'Stopping and parking',
-  'piesi-rowerzysci': 'Pedestrians, cyclists, level crossings',
-  'sytuacje-szczegolne': 'Special cases and hard conditions',
-  'sytuacje-drogowe': 'Road situations — clips and photos',
-  'pierwsza-pomoc': 'First aid',
-  ekologia: 'Eco-driving and road manners',
-  'technika-manewry': 'Driving technique and manoeuvres',
-  'warunki-techniczne': 'Vehicle roadworthiness',
-  wyposazenie: 'Equipment and vehicle load',
-  dokumenty: 'Documents and driver duties',
-  przewoz: 'Carrying people, loads and towing',
-  autostrady: 'Motorways and expressways',
+  'segnali-di-indicazione': 'Information signs',
+  'segnali-di-obbligo': 'Mandatory signs',
+  'pannelli-integrativi-dei-segnali': 'Supplementary panels',
+  'segnali-complementari': 'Complementary and roadworks signs',
+  'esempi-di-precedenza': 'Right of way at junctions',
+  'segnalazioni-semaforiche': 'Traffic lights and police signals',
+  'segnaletica-orizzontale': 'Road markings',
+  'segnali-di-pericolo': 'Warning signs',
+  'segnali-di-precedenza': 'Priority signs',
+  'segnali-di-divieto': 'Prohibition signs',
+  'definizioni-stradali-e-di-traffico': 'Road and traffic definitions',
+  'norme-sulla-circol-dei-veicoli': 'Rules of the road',
+  'ingombro-della-carreggiata': 'Obstructing the carriageway and motorways',
+  'uso-delle-luci': 'Lights, horn and warning symbols',
+  'limiti-di-velocita': 'Speed limits and level crossings',
+  'distanza-di-sicurezza': 'Safe following distance',
+  'norme-sul-sorpasso': 'Overtaking',
+  'fermata-sosta-arresto-e-partenza': 'Stopping, parking and moving off',
+  'dispositivi-di-equipaggiamento-funzione-ed-uso': 'Seat belts, child seats and helmets',
+  'patenti-di-guida': 'Licences, documents and penalties',
+  'comportamenti-per-prevenire-incidenti-stradali': 'Preventing and handling a crash',
+  'guida-in-relazione-alle-qualita-e-condizioni-fisiche-e-psichiche': 'Fitness to drive and first aid',
+  'responsabilita-civile-penale-amministrativa': 'Liability and insurance',
+  'limitazione-dei-consumi': 'Fuel use and the environment',
+  'elementi-costitutivi-del-veicolo-importanti-per-la-sicurezza': 'Vehicle parts and roadworthiness',
 };
 
-const DE: TopicNames = {
-  'zasady-ogolne': 'Grundregeln und Begriffe',
-  'znaki-ostrzegawcze': 'Gefahrenzeichen',
-  'znaki-zakazu': 'Verbotszeichen',
-  'znaki-nakazu': 'Gebotszeichen',
-  'znaki-informacyjne': 'Hinweis- und Richtungszeichen',
-  'znaki-poziome': 'Markierungen und Zusatzzeichen',
-  sygnalizacja: 'Ampeln und Zeichen der Polizei',
-  pierwszenstwo: 'Vorfahrt und Kreuzungen',
-  'wlaczanie-zmiana': 'Einfahren und Richtungswechsel',
-  wyprzedzanie: 'Überholen und Vorbeifahren',
-  predkosc: 'Geschwindigkeit und Abstände',
-  'zatrzymanie-postoj': 'Halten und Parken',
-  'piesi-rowerzysci': 'Fußgänger, Radfahrer, Bahnübergänge',
-  'sytuacje-szczegolne': 'Sonderfälle und schwierige Bedingungen',
-  'sytuacje-drogowe': 'Verkehrssituationen — Videos und Fotos',
-  'pierwsza-pomoc': 'Erste Hilfe',
-  ekologia: 'Ökologisches Fahren und Verhalten',
-  'technika-manewry': 'Fahrtechnik und Manöver',
-  'warunki-techniczne': 'Technischer Zustand des Fahrzeugs',
-  wyposazenie: 'Ausrüstung und Beladung',
-  dokumenty: 'Dokumente und Pflichten des Fahrers',
-  przewoz: 'Personen- und Lastentransport, Abschleppen',
-  autostrady: 'Autobahnen und Schnellstraßen',
-};
+const TOPIC_NAMES: Record<string, TopicNames> = { en: EN };
 
-const UK: TopicNames = {
-  'zasady-ogolne': 'Загальні правила та поняття',
-  'znaki-ostrzegawcze': 'Попереджувальні знаки',
-  'znaki-zakazu': 'Заборонні знаки',
-  'znaki-nakazu': 'Наказові знаки',
-  'znaki-informacyjne': 'Інформаційні знаки та напрямки',
-  'znaki-poziome': 'Дорожня розмітка та таблички',
-  sygnalizacja: 'Світлофори та сигнали регулювальника',
-  pierwszenstwo: 'Першочерговість і перехрестя',
-  'wlaczanie-zmiana': 'Виїзд на дорогу та зміна напрямку',
-  wyprzedzanie: 'Обгін, об’їзд, роз’їзд',
-  predkosc: 'Швидкість і дистанція',
-  'zatrzymanie-postoj': 'Зупинка та стоянка',
-  'piesi-rowerzysci': 'Пішоходи, велосипедисти, переїзди',
-  'sytuacje-szczegolne': 'Особливі випадки та складні умови',
-  'sytuacje-drogowe': 'Дорожні ситуації — відео та фото',
-  'pierwsza-pomoc': 'Перша допомога',
-  ekologia: 'Екологія та культура водіння',
-  'technika-manewry': 'Техніка керування та маневри',
-  'warunki-techniczne': 'Технічний стан автомобіля',
-  wyposazenie: 'Обладнання та завантаження',
-  dokumenty: 'Документи й обов’язки водія',
-  przewoz: 'Перевезення людей, вантажу, буксирування',
-  autostrady: 'Автомагістралі та швидкісні дороги',
-};
-
-const RU: TopicNames = {
-  'zasady-ogolne': 'Общие правила и понятия',
-  'znaki-ostrzegawcze': 'Предупреждающие знаки',
-  'znaki-zakazu': 'Запрещающие знаки',
-  'znaki-nakazu': 'Предписывающие знаки',
-  'znaki-informacyjne': 'Информационные знаки и направления',
-  'znaki-poziome': 'Разметка и таблички',
-  sygnalizacja: 'Светофоры и сигналы регулировщика',
-  pierwszenstwo: 'Приоритет и перекрёстки',
-  'wlaczanie-zmiana': 'Выезд на дорогу и смена направления',
-  wyprzedzanie: 'Обгон, объезд, разъезд',
-  predkosc: 'Скорость и дистанция',
-  'zatrzymanie-postoj': 'Остановка и стоянка',
-  'piesi-rowerzysci': 'Пешеходы, велосипедисты, переезды',
-  'sytuacje-szczegolne': 'Особые случаи и трудные условия',
-  'sytuacje-drogowe': 'Дорожные ситуации — видео и фото',
-  'pierwsza-pomoc': 'Первая помощь',
-  ekologia: 'Экология и культура вождения',
-  'technika-manewry': 'Техника вождения и манёвры',
-  'warunki-techniczne': 'Техническое состояние автомобиля',
-  wyposazenie: 'Оснащение и загрузка',
-  dokumenty: 'Документы и обязанности водителя',
-  przewoz: 'Перевозка людей, груза, буксировка',
-  autostrady: 'Автомагистрали и скоростные дороги',
-};
-
-const ES: TopicNames = {
-  'zasady-ogolne': 'Normas generales y conceptos',
-  'znaki-ostrzegawcze': 'Señales de advertencia',
-  'znaki-zakazu': 'Señales de prohibición',
-  'znaki-nakazu': 'Señales de obligación',
-  'znaki-informacyjne': 'Señales informativas y de dirección',
-  'znaki-poziome': 'Marcas viales y paneles',
-  sygnalizacja: 'Semáforos y señales del agente',
-  pierwszenstwo: 'Prioridad e intersecciones',
-  'wlaczanie-zmiana': 'Incorporación y cambio de dirección',
-  wyprzedzanie: 'Adelantamiento y cruce',
-  predkosc: 'Velocidad y distancias',
-  'zatrzymanie-postoj': 'Parada y estacionamiento',
-  'piesi-rowerzysci': 'Peatones, ciclistas, pasos a nivel',
-  'sytuacje-szczegolne': 'Casos especiales y condiciones difíciles',
-  'sytuacje-drogowe': 'Situaciones de tráfico — vídeos y fotos',
-  'pierwsza-pomoc': 'Primeros auxilios',
-  ekologia: 'Conducción ecológica y civismo',
-  'technika-manewry': 'Técnica de conducción y maniobras',
-  'warunki-techniczne': 'Estado técnico del vehículo',
-  wyposazenie: 'Equipamiento y carga',
-  dokumenty: 'Documentos y obligaciones del conductor',
-  przewoz: 'Transporte de personas, carga y remolque',
-  autostrady: 'Autopistas y autovías',
-};
-
-const TR: TopicNames = {
-  'zasady-ogolne': 'Genel kurallar ve kavramlar',
-  'znaki-ostrzegawcze': 'Tehlike uyarı işaretleri',
-  'znaki-zakazu': 'Yasaklama işaretleri',
-  'znaki-nakazu': 'Mecburiyet işaretleri',
-  'znaki-informacyjne': 'Bilgi ve yön işaretleri',
-  'znaki-poziome': 'Yol çizgileri ve levhalar',
-  sygnalizacja: 'Işıklar ve görevli işaretleri',
-  pierwszenstwo: 'Geçiş hakkı ve kavşaklar',
-  'wlaczanie-zmiana': 'Trafiğe katılma ve yön değiştirme',
-  wyprzedzanie: 'Sollama ve yandan geçme',
-  predkosc: 'Hız ve takip mesafesi',
-  'zatrzymanie-postoj': 'Durma ve park etme',
-  'piesi-rowerzysci': 'Yayalar, bisikletliler, hemzemin geçitler',
-  'sytuacje-szczegolne': 'Özel durumlar ve zor koşullar',
-  'sytuacje-drogowe': 'Trafik durumları — video ve fotoğraf',
-  'pierwsza-pomoc': 'İlk yardım',
-  ekologia: 'Çevreci sürüş ve trafik nezaketi',
-  'technika-manewry': 'Sürüş tekniği ve manevralar',
-  'warunki-techniczne': 'Aracın teknik durumu',
-  wyposazenie: 'Donanım ve yükleme',
-  dokumenty: 'Belgeler ve sürücü yükümlülükleri',
-  przewoz: 'Yolcu, yük taşıma ve çekme',
-  autostrady: 'Otoyollar ve hızlı yollar',
-};
-
-const TOPIC_NAMES: Record<string, TopicNames> = { en: EN, de: DE, uk: UK, ru: RU, es: ES, tr: TR };
-
-/** The section's name in `locale`, falling back to the bundle's Polish. */
-export function topicName(locale: string, id: string, polish: string): string {
-  return TOPIC_NAMES[locale]?.[id] ?? polish;
+/** The section's name in `locale`, falling back to the listato's Italian. */
+export function topicName(locale: string, id: string, italian: string): string {
+  return TOPIC_NAMES[locale]?.[id] ?? italian;
 }

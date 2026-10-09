@@ -7,13 +7,6 @@
     "flagEmoji": "🇷🇴"
   },
   {
-    "code": "sq",
-    "nameNative": "Shqip",
-    "nameEnglish": "Albanian",
-    "direction": "ltr",
-    "flagEmoji": "🇦🇱"
-  },
-  {
     "code": "ar",
     "nameNative": "العربية",
     "nameEnglish": "Arabic",
@@ -28,11 +21,11 @@
     "flagEmoji": "🇺🇦"
   },
   {
-    "code": "es",
-    "nameNative": "Español",
-    "nameEnglish": "Spanish",
+    "code": "zh",
+    "nameNative": "中文",
+    "nameEnglish": "Chinese",
     "direction": "ltr",
-    "flagEmoji": "🇪🇸"
+    "flagEmoji": "🇨🇳"
   },
   {
     "code": "en",
