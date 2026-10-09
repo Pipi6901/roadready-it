@@ -1,20 +1,26 @@
 import type { IconName } from '@/components/ui/Icon';
 
 /**
- * Licence categories the Polish theory exam is sat for, in the order the
- * picker shows them. Codes are the ministry's, and the same ones the question
- * catalogue lists per question — the two must match byte for byte, because
+ * Licence categories the Italian theory exam is sat for, in the order the
+ * picker shows them. Codes are the ministry's, and the same ones the listato
+ * tags each statement with — the two must match byte for byte, because
  * `questionAppliesTo` compares them as strings.
  *
- * Grouping is by vehicle, not by the letter: a learner going for a lorry
- * licence looks for "trucks", not for the alphabet.
+ * Only the A and B family is here, because that is what the listato covers:
+ * every one of its statements is tagged AM, A1, A2, A, B1, B, BE. The
+ * categories above B (C, CE, D, DE) are examined from a separate listato that
+ * this app does not carry — offering them on the picker would hand the learner
+ * an app with no questions in it.
  *
- * The rare ones — B1, C1, D1, T and PT (the tram permit) — stay in the list
- * so a question's `licences` tags resolve and a learner who somehow has one
- * saved keeps a working app, but `hidden` keeps them off the picker: a dozen
- * rows for seven real choices buries the one nearly everyone wants.
+ * Grouping is by vehicle, not by the letter: a learner going for a car licence
+ * looks for "cars", not for the alphabet.
+ *
+ * B1 and BE stay in the list but off the picker. B1 (quadricycle) is rare
+ * enough to bury the row nearly everyone wants, and BE is an extension taken
+ * after B with no theory paper of its own — but both are tagged on the
+ * statements, so they have to resolve.
  */
-export type LicenceGroup = 'moto' | 'car' | 'truck' | 'bus' | 'other';
+export type LicenceGroup = 'moto' | 'car';
 
 export interface LicenceCategory {
   code: string;
@@ -33,15 +39,10 @@ export const LICENCE_CATEGORIES: LicenceCategory[] = [
   { code: 'A', group: 'moto', icon: 'bike', minAge: 24 },
   { code: 'B1', group: 'car', icon: 'car-front', minAge: 16, hidden: true },
   { code: 'B', group: 'car', icon: 'car-front', minAge: 18 },
-  { code: 'C1', group: 'truck', icon: 'truck', minAge: 18, hidden: true },
-  { code: 'C', group: 'truck', icon: 'truck', minAge: 21 },
-  { code: 'D1', group: 'bus', icon: 'bus', minAge: 21, hidden: true },
-  { code: 'D', group: 'bus', icon: 'bus', minAge: 24 },
-  { code: 'T', group: 'other', icon: 'tractor', minAge: 16, hidden: true },
-  { code: 'PT', group: 'other', icon: 'tram-front', minAge: 21, hidden: true },
+  { code: 'BE', group: 'car', icon: 'car-front', minAge: 18, hidden: true },
 ];
 
-export const LICENCE_GROUPS: LicenceGroup[] = ['car', 'moto', 'truck', 'bus', 'other'];
+export const LICENCE_GROUPS: LicenceGroup[] = ['car', 'moto'];
 
 /** What the picker offers, in group order. A saved hidden code is shown too, so it can be seen and changed. */
 export function pickableLicences(current: string): LicenceCategory[] {

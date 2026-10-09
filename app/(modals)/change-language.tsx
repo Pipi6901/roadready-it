@@ -13,15 +13,15 @@ import { useTheme } from '@/theme/ThemeProvider';
 /**
  * The language the questions themselves are in — ТЗ 8.2 / FR-02.
  *
- * Four choices, because the Polish theory exam is sat in four languages and
- * the card should read the way the paper will at WORD. It is a full-width
- * list rather than a grid of flags: this is the more consequential of the two
- * language settings, and four rows have room to say so.
+ * Three choices, because the Italian theory exam is sat in three languages,
+ * and the card should read the way the scheda will at the Motorizzazione. A
+ * full-width list rather than a grid of flags: this is the more consequential
+ * of the two language settings, and three rows have room to say so.
  *
  * Siblings: change-translation.tsx picks the smaller line underneath, and
  * change-ui-language.tsx picks what the app itself says. Three settings, three
- * screens — a learner may sit the exam in Polish, read Ukrainian underneath it
- * and want the buttons in Russian, and none of those implies the others.
+ * screens — a learner may sit the exam in Italian, read Romanian underneath it
+ * and want the buttons in Arabic, and none of those implies the others.
  */
 export default function QuestionLanguageModal() {
   const t = useTheme();

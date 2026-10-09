@@ -170,10 +170,13 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
         return;
       }
       if (await hasNotificationPermission()) {
-        await scheduleDailyReminder(settings.reminderTime);
+        await scheduleDailyReminder(settings.reminderTime, settings.uiLocale ?? deviceUiLocale());
       }
     })();
-  }, [ready, settings.dailyReminder, settings.reminderTime]);
+    // uiLocaleCode is in here because the notification's text is written when
+    // it is scheduled: changing the interface language has to reschedule it,
+    // or tomorrow's reminder arrives in yesterday's language.
+  }, [ready, settings.dailyReminder, settings.reminderTime, settings.uiLocale]);
 
   const update = useCallback((patch: Partial<Settings>) => {
     if (!readyRef.current) {

@@ -4,6 +4,8 @@ import { COUNTRIES, DEMO_BUNDLE } from '@/data/demo-bundle';
 import { initRemoteContent, remoteContentStore } from '@/data/remoteContent';
 import { ORIGINAL_LOCALE } from '@/features/i18n/locales';
 import { topicName } from '@/features/i18n/topicNames';
+import { translate } from '@/features/i18n/useT';
+import type { StringKey } from '@/features/i18n/strings';
 import { LESSON_SIZE } from '@/constants/rules';
 import {
   questionAppliesTo,
@@ -41,6 +43,31 @@ function originalOf(q: Question): QuestionTranslation {
     options: Object.fromEntries(q.options.map((o) => [o.id, o.text])),
     explanation: q.explanation,
   };
+}
+
+/**
+ * VERO and FALSO, in `locale`.
+ *
+ * Every statement in the listato offers the same two answers, so a translator
+ * would be sending the ministry's two words 7,020 times per language. They come
+ * from the interface catalogue instead, which already has them everywhere the
+ * app speaks. Anything that is not the V/F pair returns null, so a bank with
+ * real options is left alone.
+ */
+const VERDICT_KEYS: Record<string, StringKey> = { V: 'question.true', F: 'question.false' };
+
+function verdictLabel(optionId: string, locale: string): string | null {
+  const key = VERDICT_KEYS[optionId];
+  return key ? translate(locale, key) : null;
+}
+
+/** The same two words for the second line, which its translation also omits. */
+function withVerdicts(translation: QuestionTranslation, locale: string): QuestionTranslation {
+  const options = { ...(translation.options ?? {}) };
+  for (const id of Object.keys(VERDICT_KEYS)) {
+    if (!options[id]) options[id] = translate(locale, VERDICT_KEYS[id]);
+  }
+  return { ...translation, options };
 }
 
 /** One language of a question, or null if the bundle does not carry it. */
@@ -97,24 +124,29 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
       // Screens re-decorate questions they are already holding — the lesson
       // queue is frozen at mount and decorated afresh on every render — so the
       // original has to be carried along rather than read back off `text`, which
-      // by then may be in any of the four languages. Without this, picking
-      // Polish as the second line showed the first line twice.
+      // by then may be in any of the languages. Without this, picking Italian as
+      // the second line showed the first line twice.
       const source = 'source' in q ? (q as DisplayQuestion).source : originalOf(q);
       const base = translationOf(q, questionLocale, source) ?? source;
       const translation = showTranslation ? translationOf(q, localeCode!, source) : null;
+      // Not what was asked for — what is actually on screen. A language the
+      // bundle does not carry yet falls back to the ministry's Italian, and the
+      // answer buttons have to fall back with it rather than reading Romanian
+      // under an Italian statement.
+      const textLocale = base === source ? ORIGINAL_LOCALE : questionLocale;
       return {
         ...q,
         source,
-        // Field by field, so a translation that covers the question and not an
-        // option leaves that one option in Polish rather than blanking it.
+        // Field by field, so a translation that covers the statement and not an
+        // option leaves that one option in Italian rather than blanking it.
         text: base.text,
         options: q.options.map((o) => ({
           ...o,
-          text: base.options?.[o.id] ?? source.options[o.id] ?? o.text,
+          text: base.options?.[o.id] ?? verdictLabel(o.id, textLocale) ?? source.options[o.id] ?? o.text,
         })),
         explanation: base.explanation || source.explanation,
-        textLocale: base === source ? ORIGINAL_LOCALE : questionLocale,
-        translation,
+        textLocale,
+        translation: translation && localeCode ? withVerdicts(translation, localeCode) : translation,
         media: q.mediaId ? (DEMO_BUNDLE.media[q.mediaId] ?? null) : null,
       };
     },
@@ -124,16 +156,15 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
   const value = useMemo<ContentContextValue>(() => {
     const country = COUNTRIES.find((c) => c.code === countryCode) ?? DEMO_BUNDLE.country;
 
-    // The bank for the licence the learner is going for. The exam paper is
-    // the same shape for every category — 20 basic, 12 specialist, 74 points —
-    // but a lorry candidate is asked about tachographs and a motorcyclist
-    // about counter-steering, so every draw below comes from this list, not
-    // from the whole catalogue. Sections with nothing in them for this
-    // licence disappear from the map rather than sitting there empty.
+    // The bank for the licence the learner is going for. The A/B listato tags
+    // every statement with all seven of its categories, so today this filter
+    // passes everything through — it stays because the tags are the ministry's
+    // and a later listato may not be so uniform. Sections with nothing in them
+    // for this licence disappear from the map rather than sitting there empty.
     const bank = DEMO_BUNDLE.questions.filter((q) => questionAppliesTo(q, licenceCategory));
     // Section names follow the interface language, not the question language:
-    // they are navigation, and a map of Polish headings is unreadable to the
-    // learner the app exists for. Falls back to the bundle's Polish for any
+    // they are navigation, and a map of Italian headings is unreadable to the
+    // learner the app exists for. Falls back to the bundle's Italian for any
     // id the catalogue in topicNames.ts does not know.
     const named = (t: Topic): Topic => ({ ...t, name: topicName(uiLocaleCode, t.id, t.name) });
     const topics = DEMO_BUNDLE.topics.filter((t) => bank.some((q) => q.topicId === t.id)).map(named);

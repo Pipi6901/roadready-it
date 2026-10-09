@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "roadready-pl-web",
+      "name": "roadready-it-web",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["expo", "start", "--web", "--port", "8086"],
-      "port": 8086
+      "runtimeArgs": ["expo", "start", "--web", "--port", "8087"],
+      "port": 8087
     }
   ]
 }

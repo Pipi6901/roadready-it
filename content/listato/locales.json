@@ -21,11 +21,11 @@
     "flagEmoji": "🇺🇦"
   },
   {
-    "code": "zh",
-    "nameNative": "中文",
-    "nameEnglish": "Chinese",
+    "code": "es",
+    "nameNative": "Español",
+    "nameEnglish": "Spanish",
     "direction": "ltr",
-    "flagEmoji": "🇨🇳"
+    "flagEmoji": "🇪🇸"
   },
   {
     "code": "en",
@@ -33,5 +33,19 @@
     "nameEnglish": "English",
     "direction": "ltr",
     "flagEmoji": "🇬🇧"
+  },
+  {
+    "code": "de",
+    "nameNative": "Deutsch",
+    "nameEnglish": "German",
+    "direction": "ltr",
+    "flagEmoji": "🇩🇪"
+  },
+  {
+    "code": "fr",
+    "nameNative": "Français",
+    "nameEnglish": "French",
+    "direction": "ltr",
+    "flagEmoji": "🇫🇷"
   }
 ]

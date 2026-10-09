@@ -62,29 +62,51 @@ export const COUNTRIES: Country[] = [ITALY];
 /* -------------------------------------------------------------------------- */
 
 /**
- * Translation languages, ordered by the size of the audience that reads them.
+ * Every language a question can appear in besides the ministry's Italian.
  *
- * The exam itself is sat in Polish, English, German or Polish sign language,
- * so for everyone outside those four the app's job is to teach in one language
- * and prepare them to answer in another. That gap is the product.
+ * Two kinds of entry, and the difference matters on screen. German and French
+ * are EXAM languages: the scheda is printed in them in Bolzano and Valle
+ * d'Aosta, the ministry publishes the whole listato in both, and the app shows
+ * them ALONE, the way the candidate will meet them at the Motorizzazione
+ * (EXAM_LANGUAGES in src/features/i18n/locales.ts is what draws that line).
+ * The other five are study aids and sit in smaller print underneath.
  *
- * Ukrainian first by a wide margin (1.55m residence permits, 77% of all
- * foreigners); Russian second as the shared reading language of the
- * post-Soviet groups — Belarusian, Georgian, Uzbek, Moldovan; then English
- * (Indian, Filipino and Nepali workers, and an exam language in its own
- * right), Spanish (Colombians, the fastest-growing group), and Turkish.
+ * The five are ordered by the size of the audience that reads them, and chosen
+ * so that each reaches readers the others do not. Romanian first by a wide
+ * margin (1,053,042 residents at 1 January 2025, ISTAT). Arabic second —
+ * Morocco, Egypt and Tunisia together, and the one language here the exam once
+ * used: it was among the seven the quiz was translated into until circolare
+ * 101771 of 21/12/2010 cut them back to the protected linguistic regimes.
+ * Then Ukrainian (287,187), Spanish (Peru, Ecuador, Colombia and the rest of
+ * Latin America — the readers Italian legal vocabulary misleads most, because
+ * the words look familiar and the law behind them is not), and English, which
+ * is both a choice and the bridge for the Indian, Bangladeshi, Filipino and
+ * Nigerian communities.
  *
- * The test for the tail of this list is not headcount but coverage: a language
- * earns a place if it reaches readers no other language here reaches. Belarusian
- * is the second-largest group in Poland and still does not qualify — that
- * audience reads Russian, which is already on the list, so a Belarusian
- * catalogue would double the translation bill for the same readers. Georgian and
- * Romanian fail the same test. Turkish passes it.
+ * Albanian is the second-largest community in Italy and is still not here: it
+ * is also the longest-settled, so that audience reads Italian. Chinese was on
+ * this list and came off it — a technical legal text is exactly where a
+ * machine translation into Chinese is hardest to check, and nobody on this
+ * project can read the result.
  *
- * Polish itself is not in this list: it is the original the translations sit
- * beside, offered as "no translation" rather than as a language choice.
+ * Italian itself is absent: it is the original the translations sit beside,
+ * offered as "no translation" rather than as a language choice.
  */
 export const LOCALES: Locale[] = [
+  {
+    code: 'ro',
+    nameNative: 'Română',
+    nameEnglish: 'Romanian',
+    direction: 'ltr',
+    flagEmoji: '🇷🇴',
+  },
+  {
+    code: 'ar',
+    nameNative: 'العربية',
+    nameEnglish: 'Arabic',
+    direction: 'rtl',
+    flagEmoji: '🇲🇦',
+  },
   {
     code: 'uk',
     nameNative: 'Українська',
@@ -93,11 +115,11 @@ export const LOCALES: Locale[] = [
     flagEmoji: '🇺🇦',
   },
   {
-    code: 'ru',
-    nameNative: 'Русский',
-    nameEnglish: 'Russian',
+    code: 'es',
+    nameNative: 'Español',
+    nameEnglish: 'Spanish',
     direction: 'ltr',
-    flagEmoji: '🇷🇺',
+    flagEmoji: '🇪🇸',
   },
   {
     code: 'en',
@@ -106,16 +128,9 @@ export const LOCALES: Locale[] = [
     direction: 'ltr',
     flagEmoji: '🇬🇧',
   },
-  {
-    code: 'es',
-    nameNative: 'Español',
-    nameEnglish: 'Spanish',
-    direction: 'ltr',
-    flagEmoji: '🇪🇸',
-  },
-  // German is an exam language, and the ministry's catalogue ships an official
-  // German translation of every question — the one language that costs nothing
-  // to offer. Fifth, not first: the German-reading audience in Poland is small.
+  // The two exam languages. They are in this list because the app reads every
+  // non-Italian wording out of the translation bundle, and they cost nothing:
+  // the ministry publishes the listato in both.
   {
     code: 'de',
     nameNative: 'Deutsch',
@@ -124,11 +139,11 @@ export const LOCALES: Locale[] = [
     flagEmoji: '🇩🇪',
   },
   {
-    code: 'tr',
-    nameNative: 'Türkçe',
-    nameEnglish: 'Turkish',
+    code: 'fr',
+    nameNative: 'Français',
+    nameEnglish: 'French',
     direction: 'ltr',
-    flagEmoji: '🇹🇷',
+    flagEmoji: '🇫🇷',
   },
 ];
 

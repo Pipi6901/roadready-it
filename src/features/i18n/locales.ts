@@ -28,7 +28,7 @@ export const UI_LOCALES: UiLocale[] = [
   { code: 'ro', nameNative: 'Română', nameEnglish: 'Romanian', flagEmoji: '🇷🇴' },
   { code: 'ar', nameNative: 'العربية', nameEnglish: 'Arabic', flagEmoji: '🇲🇦' },
   { code: 'uk', nameNative: 'Українська', nameEnglish: 'Ukrainian', flagEmoji: '🇺🇦' },
-  { code: 'zh', nameNative: '中文', nameEnglish: 'Chinese', flagEmoji: '🇨🇳' },
+  { code: 'es', nameNative: 'Español', nameEnglish: 'Spanish', flagEmoji: '🇪🇸' },
   { code: 'en', nameNative: 'English', nameEnglish: 'English', flagEmoji: '🇬🇧' },
 ];
 
@@ -77,7 +77,7 @@ export function dateLocaleFor(uiLocaleCode: string): string {
 }
 
 const BCP47: Record<string, string> = {
-  it: 'it-IT', ro: 'ro-RO', ar: 'ar-EG', uk: 'uk-UA', zh: 'zh-CN', en: 'en-GB',
+  it: 'it-IT', ro: 'ro-RO', ar: 'ar-EG', uk: 'uk-UA', es: 'es-ES', en: 'en-GB',
   // German and French are exam languages in the autonomous provinces.
   de: 'de-DE', fr: 'fr-FR',
 };
@@ -92,10 +92,11 @@ export function bcp47For(code: string): string {
  *
  * Italian everywhere, plus German in the province of Bolzano and French in
  * Valle d'Aosta, which are the only two places the ministry prints the scheda
- * in anything else. The quizzes in English, Spanish, Arabic, Russian and
- * Chinese were withdrawn in 2016, and that withdrawal is the whole reason this
- * app exists: a candidate who does not read technical Italian has no official
- * way around it any more.
+ * in anything else. The quiz used to be translated into the seven official UN
+ * languages as well; circolare 101771 of 21/12/2010 ended that, limiting the
+ * translations to the linguistic regimes Italian law protects. That withdrawal
+ * is the whole reason this app exists: a candidate who does not read technical
+ * Italian has no official way around it any more.
  *
  * For those three the question is shown ALONE, because it is the wording the
  * candidate will meet at the Motorizzazione. Every other language in LOCALES is
