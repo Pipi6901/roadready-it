@@ -1,10 +1,10 @@
 /**
- * DEMO CONTENT BUNDLE — placeholder question bank.
+ * SEED CONTENT BUNDLE — the bank the app ships with.
  *
- * The questions live in src/data/pl-bank: 22 sections × 5, written from
- * scratch against the Prawo o ruchu drogowym in the exam's own format (TAK/NIE
- * for basic sections, A/B/C for specialist ones), each with a `sourceRef` to
- * the article it rests on. Nothing is copied from any examination authority.
+ * The questions live in src/data/it-bank and are generated, not written: they
+ * are real statements from the ministerial listato, kept only where they stand
+ * without a figure, because the seed ships no media. Every one carries the
+ * quesito and domanda number it came from in `sourceRef`.
  *
  * This bundle exists so the app can be built, demoed and QA'd before licensed
  * content is available. It is swapped wholesale through content.json — the
@@ -14,7 +14,7 @@
  */
 
 import type { ContentBundle, Country, Locale, Topic } from '@/types/content';
-import { PL_BANK_TRANSLATIONS, PL_QUESTIONS } from './pl-bank';
+import { IT_BANK_TRANSLATIONS, IT_QUESTIONS } from './it-bank';
 
 /* -------------------------------------------------------------------------- */
 /* Countries                                                                   */
@@ -137,248 +137,244 @@ export const LOCALES: Locale[] = [
 /* -------------------------------------------------------------------------- */
 
 /**
- * The 22 sections of the Polish category-B bank: 16 basic and 6 specialist.
+ * The 25 argomenti of the ministerial listato.
  *
- * The split by class is not decoration. A basic section is answered TAK/NIE
- * and carries general road-safety knowledge; a specialist one has three
- * lettered options and covers what is specific to the licence category. They
- * are scored into two separate halves of the paper, so a candidate weak in one
- * half is in a different kind of trouble than one weak in the other, and a flat
- * list of 22 hides exactly that.
+ * Unlike Poland these are not ours: the ministry heads every quesito with one
+ * of them, so the taxonomy comes with the content and cannot drift from it.
+ * The names here are the first clause of each official argomento — the full
+ * ones run past a hundred characters with semicolons in them, and a node on
+ * the topic map has room for three lines.
  *
- * The section names themselves are a product decision. The regulation fixes the
- * classes, the weights and the counts, but it does not publish a thematic
- * taxonomy, and no competitor publishes theirs either. This one follows the
- * structure of the traffic code, which is what the questions are drawn from.
+ * No `category`: Italy asks one class of question, thirty true/false
+ * statements drawn from all 25 chapters, so there is no basic/specialist
+ * split to carry.
+ *
+ * Generated from content/listato/content.json by scripts/make_seed.py's
+ * sibling step — see scripts/import_listato.py for where the list comes from.
  */
 const TOPICS: Topic[] = [
   {
-    id: 'zasady-ogolne',
-    name: 'Zasady ogólne i pojęcia',
-    slug: 'zasady-ogolne',
-    icon: 'book-open',
-    category: 'basic',
+    id: 'segnali-di-indicazione',
+    name: 'Segnali di indicazione',
+    slug: 'segnali-di-indicazione',
+    icon: 'info',
     sortOrder: 1,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'znaki-ostrzegawcze',
-    name: 'Znaki ostrzegawcze',
-    slug: 'znaki-ostrzegawcze',
-    icon: 'triangle-alert',
-    category: 'basic',
+    id: 'segnali-di-obbligo',
+    name: 'Segnali di obbligo',
+    slug: 'segnali-di-obbligo',
+    icon: 'circle-arrow-right',
     sortOrder: 2,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'znaki-zakazu',
-    name: 'Znaki zakazu',
-    slug: 'znaki-zakazu',
-    icon: 'circle-slash',
-    category: 'basic',
+    id: 'pannelli-integrativi-dei-segnali',
+    name: 'Pannelli integrativi dei segnali',
+    slug: 'pannelli-integrativi-dei-segnali',
+    icon: 'tag',
     sortOrder: 3,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'znaki-nakazu',
-    name: 'Znaki nakazu',
-    slug: 'znaki-nakazu',
-    icon: 'circle-arrow-right',
-    category: 'basic',
+    id: 'segnali-complementari',
+    name: 'Segnali complementari',
+    slug: 'segnali-complementari',
+    icon: 'book-open',
     sortOrder: 4,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'znaki-informacyjne',
-    name: 'Znaki informacyjne i kierunku',
-    slug: 'znaki-informacyjne',
-    icon: 'info',
-    category: 'basic',
+    id: 'esempi-di-precedenza',
+    name: 'Esempi di precedenza',
+    slug: 'esempi-di-precedenza',
+    icon: 'git-fork',
     sortOrder: 5,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'znaki-poziome',
-    name: 'Znaki poziome i tabliczki',
-    slug: 'znaki-poziome',
-    icon: 'route',
-    category: 'basic',
+    id: 'segnalazioni-semaforiche',
+    name: 'Segnalazioni semaforiche',
+    slug: 'segnalazioni-semaforiche',
+    icon: 'book-open',
     sortOrder: 6,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'sygnalizacja',
-    name: 'Sygnalizacja i sygnały kierującego',
-    slug: 'sygnalizacja',
-    icon: 'circle-dot',
-    category: 'basic',
+    id: 'segnaletica-orizzontale',
+    name: 'Segnaletica orizzontale',
+    slug: 'segnaletica-orizzontale',
+    icon: 'book-open',
     sortOrder: 7,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'pierwszenstwo',
-    name: 'Pierwszeństwo i skrzyżowania',
-    slug: 'pierwszenstwo',
-    icon: 'git-fork',
-    category: 'basic',
+    id: 'segnali-di-pericolo',
+    name: 'Segnali di pericolo',
+    slug: 'segnali-di-pericolo',
+    icon: 'triangle-alert',
     sortOrder: 8,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'wlaczanie-zmiana',
-    name: 'Włączanie się do ruchu i zmiana kierunku',
-    slug: 'wlaczanie-zmiana',
-    icon: 'corner-up-right',
-    category: 'basic',
+    id: 'segnali-di-precedenza',
+    name: 'Segnali di precedenza',
+    slug: 'segnali-di-precedenza',
+    icon: 'git-fork',
     sortOrder: 9,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'wyprzedzanie',
-    name: 'Wyprzedzanie, omijanie, wymijanie',
-    slug: 'wyprzedzanie',
-    icon: 'arrow-left-right',
-    category: 'basic',
+    id: 'segnali-di-divieto',
+    name: 'Segnali di divieto',
+    slug: 'segnali-di-divieto',
+    icon: 'circle-slash',
     sortOrder: 10,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'predkosc',
-    name: 'Prędkość i odstępy',
-    slug: 'predkosc',
-    icon: 'gauge',
-    category: 'basic',
+    id: 'definizioni-stradali-e-di-traffico',
+    name: 'Definizioni stradali e di traffico',
+    slug: 'definizioni-stradali-e-di-traffico',
+    icon: 'book-open',
     sortOrder: 11,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'zatrzymanie-postoj',
-    name: 'Zatrzymanie i postój',
-    slug: 'zatrzymanie-postoj',
-    icon: 'circle-parking',
-    category: 'basic',
+    id: 'norme-sulla-circol-dei-veicoli',
+    name: 'Norme sulla circol. dei veicoli',
+    slug: 'norme-sulla-circol-dei-veicoli',
+    icon: 'car',
     sortOrder: 12,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'piesi-rowerzysci',
-    name: 'Piesi, rowerzyści, przejazdy kolejowe',
-    slug: 'piesi-rowerzysci',
-    icon: 'bike',
-    category: 'basic',
+    id: 'ingombro-della-carreggiata',
+    name: 'Ingombro della carreggiata',
+    slug: 'ingombro-della-carreggiata',
+    icon: 'truck',
     sortOrder: 13,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'sytuacje-szczegolne',
-    name: 'Sytuacje szczególne i trudne warunki',
-    slug: 'sytuacje-szczegolne',
-    icon: 'cloud-rain',
-    category: 'basic',
+    id: 'uso-delle-luci',
+    name: 'Uso delle luci',
+    slug: 'uso-delle-luci',
+    icon: 'book-open',
     sortOrder: 14,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'sytuacje-drogowe',
-    name: 'Sytuacje drogowe — filmy i zdjęcia',
-    slug: 'sytuacje-drogowe',
-    icon: 'video',
-    category: 'basic',
+    id: 'limiti-di-velocita',
+    name: 'Limiti di velocità',
+    slug: 'limiti-di-velocita',
+    icon: 'gauge',
     sortOrder: 15,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'pierwsza-pomoc',
-    name: 'Pierwsza pomoc',
-    slug: 'pierwsza-pomoc',
-    icon: 'heart-pulse',
-    category: 'basic',
+    id: 'distanza-di-sicurezza',
+    name: 'Distanza di sicurezza',
+    slug: 'distanza-di-sicurezza',
+    icon: 'ruler',
     sortOrder: 16,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'ekologia',
-    name: 'Ekologia i kultura jazdy',
-    slug: 'ekologia',
-    icon: 'leaf',
-    category: 'basic',
+    id: 'norme-sul-sorpasso',
+    name: 'Norme sul sorpasso',
+    slug: 'norme-sul-sorpasso',
+    icon: 'arrow-left-right',
     sortOrder: 17,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'technika-manewry',
-    name: 'Technika kierowania i manewry',
-    slug: 'technika-manewry',
-    icon: 'car',
-    category: 'specialist',
+    id: 'fermata-sosta-arresto-e-partenza',
+    name: 'Fermata, sosta, arresto e partenza',
+    slug: 'fermata-sosta-arresto-e-partenza',
+    icon: 'circle-parking',
     sortOrder: 18,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'warunki-techniczne',
-    name: 'Warunki techniczne pojazdu',
-    slug: 'warunki-techniczne',
-    icon: 'wrench',
-    category: 'specialist',
+    id: 'dispositivi-di-equipaggiamento-funzione-ed-uso',
+    name: 'Dispositivi di equipaggiamento: funzione ed uso',
+    slug: 'dispositivi-di-equipaggiamento-funzione-ed-uso',
+    icon: 'book-open',
     sortOrder: 19,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'wyposazenie',
-    name: 'Wyposażenie i obciążenie pojazdu',
-    slug: 'wyposazenie',
-    icon: 'package',
-    category: 'specialist',
+    id: 'patenti-di-guida',
+    name: 'Patenti di guida',
+    slug: 'patenti-di-guida',
+    icon: 'book-open',
     sortOrder: 20,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'dokumenty',
-    name: 'Dokumenty i obowiązki kierującego',
-    slug: 'dokumenty',
-    icon: 'file-text',
-    category: 'specialist',
+    id: 'comportamenti-per-prevenire-incidenti-stradali',
+    name: 'Comportamenti per prevenire incidenti stradali',
+    slug: 'comportamenti-per-prevenire-incidenti-stradali',
+    icon: 'shield-alert',
     sortOrder: 21,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'przewoz',
-    name: 'Przewóz osób, ładunku i holowanie',
-    slug: 'przewoz',
-    icon: 'truck',
-    category: 'specialist',
+    id: 'guida-in-relazione-alle-qualita-e-condizioni-fisiche-e-psichiche',
+    name: 'Guida in relazione alle qualità e condizioni fisiche e psichiche',
+    slug: 'guida-in-relazione-alle-qualita-e-condizioni-fisiche-e-psichiche',
+    icon: 'heart-pulse',
     sortOrder: 22,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
   {
-    id: 'autostrady',
-    name: 'Autostrady i drogi ekspresowe',
-    slug: 'autostrady',
-    icon: 'milestone',
-    category: 'specialist',
+    id: 'responsabilita-civile-penale-amministrativa',
+    name: 'Responsabilità civile, penale, amministrativa',
+    slug: 'responsabilita-civile-penale-amministrativa',
+    icon: 'scale',
     sortOrder: 23,
+    // Patched below from the questions that actually reference it.
+    questionCount: 0,
+  },
+  {
+    id: 'limitazione-dei-consumi',
+    name: 'Limitazione dei consumi',
+    slug: 'limitazione-dei-consumi',
+    icon: 'book-open',
+    sortOrder: 24,
+    // Patched below from the questions that actually reference it.
+    questionCount: 0,
+  },
+  {
+    id: 'elementi-costitutivi-del-veicolo-importanti-per-la-sicurezza',
+    name: 'Elementi costitutivi del veicolo importanti per la sicurezza',
+    slug: 'elementi-costitutivi-del-veicolo-importanti-per-la-sicurezza',
+    icon: 'wrench',
+    sortOrder: 25,
     // Patched below from the questions that actually reference it.
     questionCount: 0,
   },
@@ -388,7 +384,7 @@ const TOPICS: Topic[] = [
 /* Questions                                                                   */
 /* -------------------------------------------------------------------------- */
 
-const QUESTIONS = PL_QUESTIONS;
+const QUESTIONS = IT_QUESTIONS;
 
 // questionCount per topic, from the questions that actually reference it —
 // a hand-maintained number drifts the moment the bank grows.
@@ -407,9 +403,9 @@ export const DEMO_BUNDLE: ContentBundle = {
   topics: TOPICS,
   questions: QUESTIONS,
   // One catalogue per translation language in LOCALES, keyed by question id.
-  translations: PL_BANK_TRANSLATIONS,
+  translations: IT_BANK_TRANSLATIONS,
   // The bundled seed ships without images/clips — every real question's
   // mediaId comes from the admin's media library via content.json.
   media: {},
-  versionHash: 'demo-pl-2026-09-14',
+  versionHash: 'seed-it-listato',
 };
