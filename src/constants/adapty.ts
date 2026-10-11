@@ -11,8 +11,12 @@ import { Platform } from 'react-native';
  */
 
 /**
- * From the Adapty dashboard → the Polish app (not the UK "RoadReady" one) →
- * App settings → General → API keys → Public SDK key.
+ * From the Adapty dashboard → the ITALIAN app → App settings → General →
+ * API keys → Public SDK key.
+ *
+ * One app per market. Poland's key is a live key, so pasting it here does not
+ * error: the SDK authorises cleanly and then serves the Polish funnel, in
+ * Polish, attributed to the Polish app.
  *
  * Copy it with the dashboard's copy button, never retype it from a screenshot:
  * the first build shipped with a lowercase L where the key has a capital I —
@@ -22,13 +26,13 @@ import { Platform } from 'react-native';
  * "#2009 encodingFailed … fallback.json … unauthorized", nothing about a key.
  */
 export const ADAPTY_PUBLIC_KEY = Platform.select({
-  ios: 'public_live_TdjyNzCS.EfqoIgrssZRXt86nJFG4',
-  android: 'REPLACE_WITH_ADAPTY_PL_ANDROID_PUBLIC_KEY',
+  ios: 'REPLACE_WITH_ADAPTY_IT_IOS_PUBLIC_KEY',
+  android: 'REPLACE_WITH_ADAPTY_IT_ANDROID_PUBLIC_KEY',
   default: '',
 })!;
 
 /**
- * Whether the Adapty app for Poland exists yet. With the placeholders above
+ * Whether the Adapty app for Italy exists yet. With the placeholders above
  * activate() rejects, the funnel screen shows its debug error state, and the
  * first thing a tester sees is a stack trace. Until the keys are real the
  * funnel is skipped outright — see app/index.tsx.
@@ -37,9 +41,9 @@ export const ONBOARDING_CONFIGURED =
   ADAPTY_PUBLIC_KEY.length > 0 && !ADAPTY_PUBLIC_KEY.startsWith('REPLACE_WITH_');
 
 /**
- * The Placement ID configured in Adapty for the Polish onboarding
- * funnel. Dashboard → Placements → Onboardings → the placement serving the
- * `main` onboarding.
+ * The Placement ID configured in Adapty for the Italian onboarding funnel.
+ * Dashboard → Placements → Onboardings → the placement serving the `main`
+ * onboarding.
  *
  * This id looks unremarkable and cost several builds: the original placement
  * had been created with a trailing space in its ID ("roadready_onboarding "),
@@ -52,4 +56,4 @@ export const ONBOARDING_CONFIGURED =
  * So: never paste this value from anywhere. Type it, and keep it byte-identical
  * to the dashboard's Placement ID field.
  */
-export const ONBOARDING_PLACEMENT_ID = 'roadready_pl_onboarding';
+export const ONBOARDING_PLACEMENT_ID = 'roadready_it_onboarding';
