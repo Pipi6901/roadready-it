@@ -48,3 +48,6 @@ firebase-hosting/.firebase/
 # part of the deployable config (that's firebase-hosting/public/content.json)
 /content.json
 scripts/__pycache__/
+
+# Временные файлы Word, пока документ открыт
+~$*
