@@ -46,6 +46,26 @@ QUESITO = re.compile(r'Quesito n°\s*(\d+)\s*-\s*(.+)', re.S)
 ROW_NUMBER = re.compile(r'^(\d{4,6})\b')
 ANSWER = {'VERO': 'V', 'FALSO': 'F'}
 
+# The two buttons, per language.
+#
+# The listato gives them only in Italian, and translate-questions.js leaves a
+# true/false statement's `options` empty because there is nothing per-question
+# to translate — which would have left a Romanian reader with the statement in
+# Romanian and the two answers still reading "Vero" and "Falso". They are the
+# same two words on all 7,020 questions, so they belong here rather than in
+# 7,020 translation entries. German and French are the exam's own wording in
+# Alto Adige and Valle d'Aosta, not our choice.
+VERO_FALSO = {
+    'it': ('Vero', 'Falso'),
+    'de': ('Richtig', 'Falsch'),
+    'fr': ('Vrai', 'Faux'),
+    'en': ('True', 'False'),
+    'es': ('Verdadero', 'Falso'),
+    'ro': ('Adevărat', 'Fals'),
+    'uk': ('Правда', 'Неправда'),
+    'ar': ('صحيح', 'خطأ'),
+}
+
 # Column bands, in points. The grid is identical on every page.
 TEXT_X_MAX = 100
 ANSWER_X_MIN = 340
@@ -263,6 +283,55 @@ def build(rows, figures):
     return questions, [topics[t] for t in order]
 
 
+def load_translations(locales, question_ids):
+    """Fold content/listato/translations/{lang}.json into the bundle.
+
+    scripts/translate-questions.js in the admin repo writes one file per
+    language, keyed by question id, and resumes batch by batch — so a file can
+    legitimately be partial, and a language with no file at all is simply one
+    nobody has run yet. Neither is an error here: the publish step decides what
+    is complete enough to ship, and a half-translated language still reads
+    better than none, because the app falls back to the Italian per question.
+
+    Without this the bundle shipped `translations: {}` no matter how many
+    languages had been generated, and every one of them was invisible to the
+    app.
+    """
+    out = {}
+    for locale in locales:
+        code = locale['code']
+        path = os.path.join(OUT_DIR, 'translations', f'{code}.json')
+        if not os.path.exists(path):
+            print(f'  {code}: no translations/{code}.json — skipped')
+            continue
+        with open(path, encoding='utf-8') as f:
+            raw = json.load(f)
+
+        vero, falso = VERO_FALSO.get(code, VERO_FALSO['it'])
+        catalogue = {}
+        unknown = 0
+        for qid, entry in raw.items():
+            if qid not in question_ids:
+                unknown += 1
+                continue
+            text = (entry.get('text') or '').strip()
+            if not text:
+                continue
+            catalogue[qid] = {
+                'text': text,
+                # The per-question options are empty for a true/false bank, so
+                # the two answers come from the table above rather than from
+                # the translator.
+                'options': {'V': vero, 'F': falso},
+                'explanation': (entry.get('explanation') or '').strip(),
+            }
+        if catalogue:
+            out[code] = catalogue
+        note = f', {unknown} ids not in this listato' if unknown else ''
+        print(f'  {code}: {len(catalogue)}/{len(question_ids)} translated{note}')
+    return out
+
+
 def main():
     pdf_path = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_PDF
     rows, figures = parse(pdf_path)
@@ -288,12 +357,14 @@ def main():
         locales = json.load(f)
     country = {**country, 'questionCount': len(questions)}
 
+    print('translations:')
+    translations = load_translations(locales, {q['id'] for q in questions})
+
     payload = {
         'country': country,
         'topics': topics,
         'questions': questions,
-        # Written later, one catalogue per language.
-        'translations': {},
+        'translations': translations,
         'media': {},
         'versionHash': f'listato-{len(questions)}',
         'countries': [country],
