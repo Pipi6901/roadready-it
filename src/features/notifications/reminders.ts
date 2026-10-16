@@ -1,6 +1,6 @@
 import * as Notifications from 'expo-notifications';
+import { translate } from '@/features/i18n/translate';
 
-import { translate } from '@/features/i18n/useT';
 
 /**
  * Local daily lesson reminder. No backend involved — this is a device-local

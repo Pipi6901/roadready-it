@@ -1,8 +1,10 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
+import { AppState } from 'react-native';
 
 import {
   deviceUiLocale, findLocale, findUiLocale, isExamLanguage, ORIGINAL_LOCALE,
 } from '@/features/i18n/locales';
+import { translate } from '@/features/i18n/translate';
 import { cancelDailyReminder, hasNotificationPermission, scheduleDailyReminder } from '@/features/notifications/reminders';
 import { KEYS, load, save } from './storage';
 
@@ -74,7 +76,9 @@ const DEFAULTS: Settings = {
   uiLocale: null,
   themeMode: 'dark',
   examDate: null,
-  displayName: 'Learner',
+  // Empty, not 'Learner': the placeholder is translated at display time
+  // below, so an Italian learner is not greeted by an English noun.
+  displayName: '',
   firstLaunchAt: new Date().toISOString(),
   // Defaults off, not on: nothing ever requests the OS notification
   // permission at first launch, so an "on" default here would show the
@@ -138,6 +142,20 @@ function migrate(stored: Partial<Settings>): Partial<Settings> {
 export function SettingsProvider({ children }: { children: React.ReactNode }) {
   const [settings, setSettings] = useState<Settings>(DEFAULTS);
   const [ready, setReady] = useState(false);
+
+  // Midnight of the current day, kept in state rather than read during render.
+  // The days-to-exam counter used to take Date.now() inside the memo below,
+  // which froze it to whenever that memo last ran: an app left open overnight
+  // went on saying the exam was in the same number of days it was yesterday.
+  // The foreground event is the only moment the date can have moved under a
+  // running app, so that is when it is re-read.
+  const [today, setToday] = useState(() => new Date().setHours(0, 0, 0, 0));
+  useEffect(() => {
+    const sub = AppState.addEventListener('change', (state) => {
+      if (state === 'active') setToday(new Date().setHours(0, 0, 0, 0));
+    });
+    return () => sub.remove();
+  }, []);
   // Patches made before storage has been read. Persisting one of those
   // straight away would write DEFAULTS-plus-patch over whatever is stored:
   // a cold start that lands on the paywall and calls update({ onboarded })
@@ -205,12 +223,20 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     const uiLocaleCode = settings.uiLocale ?? deviceUiLocale();
     let daysUntilExam: number | null = null;
     if (settings.examDate) {
-      const diff = new Date(settings.examDate).getTime() - Date.now();
-      daysUntilExam = Math.max(0, Math.ceil(diff / 86_400_000));
+      // Rounded, not ceiled: both ends are local midnights, so the gap between
+      // them is a whole number of days — except across a clock change, where it
+      // comes out an hour short or an hour long. Italy puts its clocks back on
+      // 25 October 2026, and ceil turned that extra hour into an extra day: an
+      // exam six days out read as seven. Rounding lands on the right day either
+      // way.
+      const diff = new Date(settings.examDate).setHours(0, 0, 0, 0) - today;
+      daysUntilExam = Math.max(0, Math.round(diff / 86_400_000));
     }
     return {
       ...settings,
       ready,
+      // Derived, so no screen has to know the stored value can be empty.
+      displayName: settings.displayName || translate(uiLocaleCode, 'profile.defaultName'),
       update,
       reset,
       questionLocale,
@@ -226,7 +252,7 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
       uiLocaleName: findUiLocale(uiLocaleCode)?.nameNative ?? uiLocaleCode,
       daysUntilExam,
     };
-  }, [settings, ready, update, reset]);
+  }, [settings, ready, update, reset, today]);
 
   return <SettingsContext.Provider value={value}>{children}</SettingsContext.Provider>;
 }

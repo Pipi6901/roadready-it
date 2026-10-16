@@ -106,8 +106,8 @@ export default function CountryModal() {
                 accessibilityRole="button"
                 accessibilityLabel={
                   available
-                    ? `${country.name}, ${country.questionCount} questions available`
-                    : `${country.name}, coming soon`
+                    ? `${country.name}, ${tr('country.available', { count: country.questionCount })}`
+                    : `${country.name}, ${tr('country.comingSoon')}`
                 }
                 accessibilityState={{ selected, disabled: !available }}
                 style={({ pressed }) => [
@@ -137,7 +137,9 @@ export default function CountryModal() {
                     weight={available ? '600' : '400'}
                     color={available ? t.colors.successText : t.colors.textMuted}
                   >
-                    {available ? `${country.questionCount} questions available` : 'Coming soon'}
+                    {available
+                      ? tr('country.available', { count: country.questionCount })
+                      : tr('country.comingSoon')}
                   </Txt>
                 </View>
 
@@ -163,7 +165,7 @@ export default function CountryModal() {
 
           {filtered.length === 0 ? (
             <Txt size={14} color={t.colors.textSecondary} align="center">
-              No countries match “{query}”.
+              {tr('country.noMatch', { query })}
             </Txt>
           ) : null}
         </ScreenScroll>
