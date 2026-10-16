@@ -1,6 +1,7 @@
 import { File, Paths } from 'expo-file-system';
 import { Platform } from 'react-native';
 
+import { bundleIsCurrent } from './bundleVersion';
 import { COUNTRIES, DEMO_BUNDLE, LOCALES } from './demo-bundle';
 import { KEYS, load, remove, save } from '@/store/storage';
 import type { ContentBundle, Country, Locale } from '@/types/content';
@@ -31,6 +32,13 @@ import type { ContentBundle, Country, Locale } from '@/types/content';
  * this line, never separately.
  */
 const CONTENT_URL = 'https://roadready-it.web.app/content.json';
+
+/**
+ * Sits beside the bundle and holds only its hash — see bundleVersion.ts.
+ * Derived from CONTENT_URL rather than typed out, so the two cannot end up
+ * naming different sites.
+ */
+const VERSION_URL = CONTENT_URL.replace(/content\.json$/, 'version.json');
 
 /**
  * The country this build ships for. A payload for anyone else is refused.
@@ -109,6 +117,12 @@ export const remoteContentStore = {
 export async function initRemoteContent(): Promise<void> {
   const cached = await readCache();
   if (cached && isValidPayload(cached)) applyPayload(cached);
+
+  // Ask the few-dozen-byte version file first. If it says the hash already
+  // held is the published one there is nothing to download. Anything short
+  // of a clear yes — no such file yet, no network, an unexpected body —
+  // falls through to the download below, exactly as before.
+  if (await bundleIsCurrent(VERSION_URL, DEMO_BUNDLE.versionHash)) return;
 
   try {
     // no-store: this fetch's entire purpose is checking for something newer
