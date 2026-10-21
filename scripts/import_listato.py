@@ -186,13 +186,22 @@ def parse(pdf_path):
             return None
 
         pending = None
+        header_open = False
         for x0, y0, text in lines:
             if text in NOISE:
                 continue
 
             m = QUESITO.match(text)
             if m:
+                # A header ends the statement above it, and its argomento can
+                # wrap onto further lines ("... riguardo verso gli utenti
+                # deboli della strada (anziani, ..."): those belong to the
+                # header, not to whatever statement happened to be open.
+                if pending:
+                    close(pending)
+                    pending = None
                 current = (int(m.group(1)), re.sub(r'\s+', ' ', m.group(2)).strip())
+                header_open = True
                 continue
 
             if x0 >= ANSWER_X_MIN:
@@ -204,8 +213,13 @@ def parse(pdf_path):
             if x0 >= TEXT_X_MAX or current is None:
                 continue
 
+            if header_open and not NUMBER_ONLY.match(text):
+                current = (current[0], current[1] + ' ' + text)
+                continue
+
             m = NUMBER_ONLY.match(text)
             if m:
+                header_open = False
                 if pending:
                     close(pending)
                 pending = {
