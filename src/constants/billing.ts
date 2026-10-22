@@ -15,7 +15,7 @@ export const REVENUECAT_API_KEY = Platform.select({
   // The Italian RevenueCat project, which is a different project from the
   // Polish one. Never paste Poland's key here: it is a valid key, so the SDK
   // configures cleanly and then offers products this bundle id does not own.
-  ios: 'REPLACE_WITH_REVENUECAT_IT_IOS_PUBLIC_KEY',
+  ios: 'appl_tUcVOQYhvbUghhXRcrDUxiIcxpo',
   android: 'REPLACE_WITH_REVENUECAT_IT_ANDROID_PUBLIC_KEY',
   default: '',
 })!;
