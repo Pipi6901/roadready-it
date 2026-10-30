@@ -1,0 +1,1097 @@
+{
+ "q-19116": {
+  "it": "I pannelli raffigurati sono installati su cavalletti che vietano il transito dell'attraversamento ferroviario",
+  "history": [
+   {
+    "round": 0,
+    "translation": "تُثبَّت اللوحات المبيّنة في الصورة على حوامل تمنع المرور عبر معبر السكة الحديدية",
+    "problems": [
+     "variant t1: negation: source has 1, back-translation has 0",
+     "variant t2: negation: source has 1, back-translation has 0",
+     "variant t3: negation: source has 1, back-translation has 0"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "اللوحات المبيّنة في الصورة مثبتة على حوامل تمنع العبور من معبر السكة الحديدية",
+    "back": "I pannelli illustrati nell'immagine sono fissati su supporti che impediscono l'attraversamento del passaggio a livello",
+    "problems": [
+     "negation: source has 1, back-translation has 0"
+    ]
+   },
+   {
+    "round": 2,
+    "translation": "اللوحات المبيّنة في الصورة مثبتة على حوامل تمنع العبور في ممر السكة الحديدية",
+    "back": "I pannelli mostrati nella figura sono fissati su sostegni che impediscono il transito nel passaggio a livello",
+    "problems": [
+     "negation: source has 1, back-translation has 0"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "اللوحات المبيّنة في الصورة مثبتة على حوامل تمنع المرور عبر معبر السكة الحديدية",
+    "back": "I pannelli mostrati nell'immagine sono fissati su supporti che impediscono il passaggio attraverso il passaggio a livello",
+    "problems": [
+     "negation: source has 1, back-translation has 0"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "اللوحات المبيّنة في الصورة مثبتة على حوامل تمنع العبور عبر ممر السكة الحديدية",
+    "back": "I pannelli indicati nell'immagine sono fissati su supporti che impediscono il passaggio attraverso il passaggio a livello",
+    "problems": [
+     "negation: source has 1, back-translation has 0"
+    ]
+   }
+  ]
+ },
+ "q-19445": {
+  "it": "Il segnale raffigurato richiede, in caso di forte vento laterale, di procedere con prudenza tenendo il volante con una presa più sicura",
+  "history": [
+   {
+    "round": 0,
+    "translation": "تتطلب العلامة المبيّنة في الصورة، في حالة رياح جانبية قوية، السير بحذر مع الإمساك بالمقود بقبضة أكثر ثباتًا",
+    "problems": [
+     "variant t1: more: source [] vs back-translation ['più']",
+     "variant t2: more: source [] vs back-translation ['più']",
+     "variant t3: more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "العلامة المبيّنة في الصورة تتطلب، في حالة رياح جانبية قوية، السير بحذر مع الإمساك بالمقود بقبضة أكثر إحكامًا",
+    "back": "Il segnale mostrato nell'immagine richiede, in caso di forte vento laterale, di procedere con prudenza tenendo il volante con una presa più salda",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "العلامة المبيّنة في الصورة تتطلب، في حالة رياح جانبية قوية، السير بحذر مع الإمساك بالمقود بقبضة أكثر إحكامًا",
+    "back": "Il segnale indicato nell'immagine richiede, in caso di forte vento laterale, di procedere con cautela tenendo il volante con una presa più salda",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   }
+  ]
+ },
+ "q-18917": {
+  "it": "In presenza del segnale raffigurato è necessario tenere il volante con una presa più sicura",
+  "history": [
+   {
+    "round": 0,
+    "translation": "عند وجود العلامة المبيّنة في الصورة يجب الإمساك بالمقود بقبضة أكثر ثباتًا",
+    "problems": [
+     "variant t1: more: source [] vs back-translation ['più']",
+     "variant t2: more: source [] vs back-translation ['più']",
+     "variant t3: more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "في وجود العلامة المبيّنة في الصورة، يجب الإمساك بالمقود بقبضة أكثر إحكامًا",
+    "back": "In presenza del segnale mostrato nell'immagine, si deve tenere il volante con una presa più salda",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "عند وجود العلامة المبيّنة في الصورة، يجب الإمساك بالمقود بقبضة أكثر إحكامًا",
+    "back": "In presenza del segnale indicato nell'immagine, si deve tenere il volante con una presa più salda",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   }
+  ]
+ },
+ "q-21960": {
+  "it": "Il delineatore raffigurato è posto nelle curve strette e con mancanza di visibilità",
+  "history": [
+   {
+    "round": 0,
+    "translation": "عمود تحديد المسار المبيّن في الصورة يوضع في المنعطفات الضيقة وعند انعدام الرؤية",
+    "problems": [
+     "variant t1: negation: source has 0, back-translation has 1",
+     "variant t3: negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "عمود تحديد المسار المبيّن في الصورة يوضع في المنعطفات الضيقة وذات انعدام الرؤية",
+    "back": "Il delineatore speciale di ostacolo mostrato nell'immagine viene posto nelle curve strette e prive di visibilità",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "عمود تحديد المسار المبيّن في الصورة يوضع في المنعطفات الضيقة وذات الرؤية المنعدمة",
+    "back": "Il palo delimitatore di percorso indicato nell'immagine viene collocato nelle curve strette e con visibilità nulla",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   }
+  ]
+ },
+ "q-20768": {
+  "it": "Rispetto al veicolo che procede nel senso della freccia, la striscia continua centrale in figura si trova ogni volta che si supera un passaggio a livello",
+  "history": [
+   {
+    "round": 0,
+    "translation": "بالنسبة للمركبة التي تسير في اتجاه السهم، يوجد الخط المتصل الأوسط في الصورة في كل مرة يتم فيها اجتياز ممر السكة الحديدية (ممر مستوي)",
+    "problems": [
+     "variant t2: more: source ['supera'] vs back-translation []",
+     "variant t3: more: source ['supera'] vs back-translation []"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "بالنسبة للمركبة التي تسير في اتجاه السهم، يوجد الخط المتصل الأوسط في الصورة في كل مرة يتم فيها اجتياز ممر السكة الحديدية (ممر مستوي)",
+    "back": "Per il veicolo che procede nella direzione della freccia, la linea continua centrale nell'immagine è presente ogni volta che si attraversa un passaggio a livello",
+    "problems": [
+     "more: source ['supera'] vs back-translation []"
+    ]
+   },
+   {
+    "round": 2,
+    "translation": "بالنسبة للمركبة التي تسير في اتجاه السهم، يوجد الخط المتصل الأوسط في الصورة كلما تم اجتياز ممر السكة الحديدية (ممر مستوي)",
+    "back": "Per il veicolo che circola nella direzione della freccia, la linea continua centrale nella figura si trova ogni volta che si attraversa l'attraversamento ferroviario (passaggio a livello)",
+    "problems": [
+     "more: source ['supera'] vs back-translation []"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "بالنسبة للمركبة التي تسير في اتجاه السهم، يوجد الخط المتصل المركزي المبيّن في الصورة في كل مرة يتم فيها اجتياز ممر السكة الحديدية (ممر مستوي)",
+    "back": "Per il veicolo che procede nella direzione della freccia, la linea continua centrale mostrata nell'immagine è presente ogni volta che si attraversa il passaggio a livello ferroviario (passaggio a livello)",
+    "problems": [
+     "more: source ['supera'] vs back-translation []"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "بالنسبة إلى المركبة التي تسير في اتجاه السهم، يوجد الخط المتصل المركزي المبيّن في الصورة كلما تم اجتياز ممر السكة الحديدية (ممر مستوي)",
+    "back": "Per il veicolo che procede nella direzione della freccia, la linea continua centrale indicata nell'immagine è presente ogni volta che si attraversa il passaggio a livello (attraversamento a livello)",
+    "problems": [
+     "more: source ['supera'] vs back-translation []"
+    ]
+   }
+  ]
+ },
+ "q-22680": {
+  "it": "Chi guida un veicolo, anche se ad elevate prestazioni, non deve, comunque, superare i limiti di velocità previsti dalla legge",
+  "history": [
+   {
+    "round": 0,
+    "translation": "من يقود مركبة، حتى لو كانت عالية الأداء، لا يجوز له، على أي حال، تجاوز حدود السرعة المقررة بالقانون",
+    "problems": [
+     "variant t1: negation: source has 1, back-translation has 0",
+     "variant t1: atmost: source [] vs back-translation ['ATMOST']",
+     "variant t3: negation: source has 1, back-translation has 0",
+     "variant t3: atmost: source [] vs back-translation ['ATMOST']"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "من يسوق مركبة، حتى وإن كانت عالية الأداء، يجب ألّا يتجاوز، في كل الأحوال، حدود السرعة المنصوص عليها في القانون",
+    "back": "Chi guida un veicolo, anche se ad alte prestazioni, non deve superare, in ogni caso, i limiti di velocità previsti dalla legge",
+    "problems": [
+     "negation: source has 1, back-translation has 0",
+     "atmost: source [] vs back-translation ['ATMOST']"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "من يقود مركبة، حتى لو كانت ذات أداء عالٍ، يجب عليه، في جميع الأحوال، ألّا يتعدى حدود السرعة المقررة في القانون",
+    "back": "Chi guida un veicolo, anche se ad alte prestazioni, deve, in ogni caso, non superare i limiti di velocità stabiliti dalla legge",
+    "problems": [
+     "negation: source has 1, back-translation has 0",
+     "atmost: source [] vs back-translation ['ATMOST']"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "من يقود مركبة، حتى وإن كانت عالية الأداء، يجب عليه، على أي حال، ألّا يتجاوز حدود السرعة المنصوص عليها في القانون",
+    "back": "Chi guida un veicolo, anche se ad alte prestazioni, deve, in ogni caso, non superare i limiti di velocità previsti dalla legge",
+    "problems": [
+     "negation: source has 1, back-translation has 0",
+     "atmost: source [] vs back-translation ['ATMOST']"
+    ]
+   }
+  ]
+ },
+ "q-22689": {
+  "it": "Chi guida un veicolo può montare trombe bitonali per essere sentito più agevolmente, usandole però solo fuori dei centri abitati",
+  "history": [
+   {
+    "round": 0,
+    "translation": "يمكن لمن يسوق مركبة أن يركّب أبواقًا ثنائية النغمة ليُسمع بسهولة أكبر، لكن مع استعمالها فقط خارج التجمعات العمرانية",
+    "problems": [
+     "variant t1: if: source [] vs back-translation ['a condizione']",
+     "variant t1: more: source ['più'] vs back-translation []",
+     "variant t2: more: source ['più'] vs back-translation []",
+     "variant t3: if: source [] vs back-translation ['a condizione']",
+     "variant t3: more: source ['più'] vs back-translation []"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "يمكن لمن يسوق مركبة أن يركّب أبواقًا ثنائية النغمة ليُسمع بسهولة أكبر، لكن مع استعمالها فقط خارج التجمعات العمرانية",
+    "back": "Chi guida un veicolo può montare clacson bitonali per farsi sentire più facilmente, ma usandoli solo fuori dai centri abitati",
+    "problems": [
+     "more: source ['più'] vs back-translation []"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "يمكن لمن يقود مركبة أن يركّب أبواقًا ثنائية النغمة ليُسمَع بسهولة أكبر، لكن مع استعمالها فقط خارج التجمعات العمرانية",
+    "back": "Chi guida un veicolo può montare clacson bitonali per essere sentito più facilmente, ma usandoli solo fuori dai centri abitati",
+    "problems": [
+     "more: source ['più'] vs back-translation []"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "يمكن لمن يقود مركبة تركيب أبواق ثنائية النغمة ليُسمَع بسهولة أكبر، على أن يستعملها فقط خارج التجمعات العمرانية",
+    "back": "Chi guida un veicolo può installare trombe bitonali per essere sentito più facilmente, a condizione di usarle soltanto fuori dai centri abitati",
+    "problems": [
+     "if: source [] vs back-translation ['a condizione']",
+     "more: source ['più'] vs back-translation []"
+    ]
+   }
+  ]
+ },
+ "q-22941": {
+  "it": "Quando manca la segnaletica orizzontale non è consentito effettuare manovre di inversione del senso di marcia",
+  "history": [
+   {
+    "round": 0,
+    "translation": "عندما تنعدم العلامات الأرضية (التشوير الأفقي) لا يُسمح بتنفيذ مناورات الدوران للرجوع إلى الخلف",
+    "problems": [
+     "variant t1: negation: source has 1, back-translation has 2",
+     "variant t3: negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "عند غياب العلامات الأرضية (التشوير الأفقي) لا يُسمح بالقيام بمناورات الدوران للرجوع إلى الخلف",
+    "back": "In assenza della segnaletica orizzontale non è permesso effettuare manovre di inversione di marcia",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "عندما تغيب العلامات الأرضية، لا يُسمح بالقيام بمناورات الدوران للرجوع إلى الخلف",
+    "back": "Quando la segnaletica orizzontale è assente, non è consentito effettuare manovre di inversione di marcia",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "عند غياب العلامات الأرضية (التشوير الأفقي) لا يُسمح بالقيام بمناورات الدوران للرجوع إلى الخلف",
+    "back": "In assenza di segnali orizzontali (segnaletica orizzontale) non è consentito eseguire manovre di inversione di marcia",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   }
+  ]
+ },
+ "q-22978": {
+  "it": "Il conducente di un autoveicolo che parte dal margine della carreggiata e si immette nel flusso della circolazione deve allacciare la cintura di sicurezza salvo che non sia esentato",
+  "history": [
+   {
+    "round": 0,
+    "translation": "سائق المركبة ذات المحرك الذي ينطلق من حافة قارعة الطريق ويندمج في تدفق السير عليه أن يربط حزام الأمان ما لم يكن معفى منه",
+    "problems": [
+     "variant t1: negation: source has 1, back-translation has 0",
+     "variant t2: negation: source has 1, back-translation has 0",
+     "variant t3: negation: source has 1, back-translation has 0"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "يجب على سائق المركبة ذات المحرك الذي ينطلق من حافة قارعة الطريق ويندمج في حركة السير أن يربط حزام السلامة، إلا إذا كان معفى منه",
+    "back": "Il conducente di un veicolo a motore che parte dal margine della carreggiata e si immette nel traffico deve allacciare la cintura di sicurezza, a meno che non ne sia esentato",
+    "problems": [
+     "less: source [] vs back-translation ['meno']"
+    ]
+   },
+   {
+    "round": 2,
+    "translation": "يجب على سائق مركبة ذات محرك ينطلق من حافة قارعة الطريق ويدخل في تدفق السير أن يربط حزام الأمان إلا إذا كان معفى",
+    "back": "Il conducente di un veicolo a motore che parte dal margine della carreggiata e si immette nel flusso della circolazione deve allacciare la cintura di sicurezza a meno che non sia esentato",
+    "problems": [
+     "less: source [] vs back-translation ['meno']"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "يجب على سائق المركبة ذات المحرك الذي ينطلق من حافة قارعة الطريق ويندمج في حركة السير أن يربط حزام السلامة، باستثناء حالة إعفائه",
+    "back": "Il conducente di un veicolo a motore che parte dal margine della carreggiata e si immette nel traffico deve allacciare la cintura di sicurezza, tranne nel caso in cui sia esentato",
+    "problems": [
+     "negation: source has 1, back-translation has 0"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "سائق المركبة ذات المحرك الذي ينطلق من حافة قارعة الطريق ويندمج في حركة السير يجب عليه ربط حزام السلامة ما لم يكن معفى",
+    "back": "Il conducente del veicolo a motore che parte dal margine della carreggiata e si immette nel traffico deve allacciare la cintura di sicurezza a meno che non sia esentato",
+    "problems": [
+     "less: source [] vs back-translation ['meno']"
+    ]
+   }
+  ]
+ },
+ "q-23826": {
+  "it": "Fuori dei centri abitati, di notte, quando mancano o sono insufficienti le luci posteriori di posizione o di emergenza, è obbligatorio presegnalare il veicolo, fermo sulla carreggiata, con il segnale triangolare mobile di pericolo",
+  "history": [
+   {
+    "round": 0,
+    "translation": "خارج التجمعات العمرانية، ليلًا، عندما تنعدم أضواء الوضع الخلفية أو أضواء الطوارئ أو تكون غير كافية، من الإلزامي الإشارة المسبقة إلى المركبة المتوقفة على قارعة الطريق بمثلث التشوير",
+    "problems": [
+     "variant t2: negation: source has 1, back-translation has 2",
+     "variant t3: negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "خارج التجمعات العمرانية، ليلًا، عندما تكون أضواء الوضع الخلفية أو أضواء الطوارئ غائبة أو غير كافية، من الإلزامي الإشارة المسبقة إلى المركبة المتوقفة على قارعة الطريق بواسطة مثلث التشوير",
+    "back": "Fuori dai centri abitati, di notte, quando le luci di posizione posteriori o le luci di emergenza sono assenti o insufficienti, è obbligatorio segnalare in anticipo il veicolo fermo sulla carreggiata mediante il triangolo di segnalazione",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "خارج التجمعات العمرانية، ليلًا، عندما تكون أضواء الوضع الخلفية أو أضواء الطوارئ منعدمة أو قاصرة، من الإلزامي التنبيه المسبق إلى المركبة المتوقفة على قارعة الطريق بواسطة مثلث التشوير",
+    "back": "Fuori dai centri abitati, di notte, quando le luci di posizione posteriori o le luci di emergenza sono assenti o insufficienti, è obbligatorio segnalare preventivamente il veicolo fermo sulla carreggiata mediante il triangolo di segnalazione",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   }
+  ]
+ },
+ "q-23837": {
+  "it": "Di notte, quando mancano o sono insufficienti le luci posteriori di posizione o di emergenza, è obbligatorio presegnalare il veicolo fermo con il segnale triangolare mobile di pericolo anche nei centri abitati",
+  "history": [
+   {
+    "round": 0,
+    "translation": "ليلًا، عندما تنعدم أضواء الوضع الخلفية أو أضواء الطوارئ أو تكون غير كافية، من الإلزامي الإشارة المسبقة إلى المركبة المتوقفة بمثلث التشوير حتى داخل التجمعات العمرانية",
+    "problems": [
+     "variant t2: negation: source has 1, back-translation has 2",
+     "variant t3: negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "ليلًا، عندما تكون أضواء الوضع الخلفية أو أضواء الطوارئ غائبة أو غير كافية، من الإلزامي الإشارة المسبقة إلى المركبة المتوقفة بواسطة مثلث التشوير حتى داخل التجمعات العمرانية",
+    "back": "Di notte, quando le luci di posizione posteriori o le luci di emergenza sono assenti o insufficienti, è obbligatorio segnalare in anticipo il veicolo fermo mediante il triangolo di segnalazione anche all'interno dei centri abitati",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "ليلًا، عندما تكون أضواء الوضع الخلفية أو أضواء الطوارئ منعدمة أو قاصرة، من الإلزامي التنبيه المسبق إلى المركبة المتوقفة بواسطة مثلث التشوير حتى داخل التجمعات العمرانية",
+    "back": "Di notte, quando le luci di posizione posteriori o le luci di emergenza sono assenti o insufficienti, è obbligatorio segnalare preventivamente il veicolo fermo mediante il triangolo di segnalazione anche all'interno dei centri abitati",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   }
+  ]
+ },
+ "q-23838": {
+  "it": "Di notte, quando mancano o sono insufficienti le luci posteriori di posizione, è obbligatorio presegnalare velocipedi, ciclomotori e motocicli fermi con il segnale triangolare mobile di pericolo anche nei centri abitati",
+  "history": [
+   {
+    "round": 0,
+    "translation": "ليلًا، عندما تنعدم أضواء الوضع الخلفية أو تكون غير كافية، من الإلزامي الإشارة المسبقة إلى الدراجات الهوائية والدراجات النارية الصغيرة (موبيليت) والدراجات النارية المتوقفة بمثلث التشوير حتى داخل التجمعات العمرانية",
+    "problems": [
+     "variant t2: negation: source has 1, back-translation has 2",
+     "variant t3: negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "ليلًا، عندما تكون أضواء الوضع الخلفية غائبة أو غير كافية، من الإلزامي الإشارة المسبقة إلى الدراجات والدراجات النارية الصغيرة (موبيليت) والدراجات النارية المتوقفة بواسطة مثلث التشوير حتى داخل التجمعات العمرانية",
+    "back": "Di notte, quando le luci di posizione posteriori sono assenti o insufficienti, è obbligatorio segnalare in anticipo le biciclette, i ciclomotori (motorini) e le motociclette fermi mediante il triangolo di segnalazione anche all'interno dei centri abitati",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "ليلًا، عندما تكون أضواء الوضع الخلفية منعدمة أو قاصرة، من الإلزامي التنبيه المسبق إلى الدراجات الهوائية والدراجات النارية الصغيرة (موبيليت) والدراجات النارية المتوقفة بواسطة مثلث التشوير حتى داخل التجمعات العمرانية",
+    "back": "Di notte, quando le luci di posizione posteriori sono assenti o insufficienti, è obbligatorio segnalare preventivamente le biciclette, i ciclomotori (motorini) e le motociclette fermi mediante il triangolo di segnalazione anche all'interno dei centri abitati",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   }
+  ]
+ },
+ "q-23925": {
+  "it": "Il carico dei veicoli deve essere sistemato in modo da non diminuire la visibilità al conducente né impedirgli la libertà dei movimenti nella guida",
+  "history": [
+   {
+    "round": 0,
+    "translation": "يجب ترتيب حمولة المركبات بطريقة لا تقلل من رؤية السائق ولا تعيق حرية حركاته أثناء السياقة",
+    "problems": [
+     "variant t1: negation: source has 1, back-translation has 2",
+     "variant t2: negation: source has 1, back-translation has 2",
+     "variant t3: negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "يجب ترتيب حمولة المركبات بطريقة لا تقلل من رؤية السائق ولا تعيق حرية حركاته أثناء السياقة",
+    "back": "Il carico dei veicoli deve essere disposto in modo da non ridurre la visibilità del conducente e da non impedire la libertà dei suoi movimenti durante la guida",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 2,
+    "translation": "يجب ترتيب حمولة المركبات بحيث لا تقلل من رؤية السائق ولا تمنعه من حرية الحركة أثناء القيادة",
+    "back": "Il carico dei veicoli deve essere sistemato in modo da non ridurre la visibilità del conducente e da non impedirgli la libertà di movimento durante la guida",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "يجب ترتيب حمولة المركبات بشكل لا يقلّل من رؤية السائق ولا يعيق حرية حركاته أثناء السياقة",
+    "back": "Il carico dei veicoli deve essere sistemato in modo da non ridurre la visibilità del conducente e da non ostacolare la libertà dei suoi movimenti durante la guida",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "يجب ترتيب حمولة المركبات بطريقة لا تُنقص رؤية السائق ولا تعيق حرية حركاته أثناء السياقة",
+    "back": "Il carico dei veicoli deve essere sistemato in modo da non diminuire la visibilità del conducente e da non ostacolare la libertà dei suoi movimenti durante la guida",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   }
+  ]
+ },
+ "q-23984": {
+  "it": "Risulta maggiormente pericolosa la collisione tra veicoli dotati di masse molto diverse tra loro",
+  "history": [
+   {
+    "round": 0,
+    "translation": "الاصطدام بين مركبات ذات كتل مختلفة جدًا فيما بينها أشد خطورة",
+    "problems": [
+     "variant t1: more: source [] vs back-translation ['più']",
+     "variant t2: more: source [] vs back-translation ['più']",
+     "variant t3: more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "يكون الاصطدام بين مركبات ذات كتل مختلفة جدًا فيما بينها أشد خطورة",
+    "back": "L'urto tra veicoli con masse molto diverse tra loro è più grave",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 2,
+    "translation": "يكون الاصطدام بين المركبات ذات الكتل المختلفة جدًا فيما بينها أشد خطورة",
+    "back": "L'urto tra veicoli di masse molto diverse tra loro è più grave",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "يكون الاصطدام بين مركبات ذات كتل مختلفة جدًا فيما بينها أكثر خطورة",
+    "back": "L'urto tra veicoli con masse molto diverse tra loro è più pericoloso",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "يكون الاصطدام بين مركبات ذات كتل مختلفة جدًا فيما بينها أشد خطورة",
+    "back": "L'urto tra veicoli con masse molto diverse tra loro è più grave",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   }
+  ]
+ },
+ "q-24110": {
+  "it": "Se nella carta di circolazione manca il valore della massa rimorchiabile, ciò significa che il veicolo è atto al traino di rimorchi di qualsiasi massa",
+  "history": [
+   {
+    "round": 0,
+    "translation": "إذا خلت البطاقة الرمادية (وثيقة تسجيل المركبة) من قيمة الكتلة القابلة للقطر، فهذا يعني أن المركبة صالحة لقطر مقطورات بأي كتلة",
+    "problems": [
+     "variant t1: negation: source has 0, back-translation has 1",
+     "variant t2: negation: source has 0, back-translation has 1",
+     "variant t3: negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "إذا خلت البطاقة الرمادية (وثيقة تسجيل المركبة) من قيمة الكتلة القابلة للقطر، فهذا يعني أن المركبة صالحة لقطر مقطورات بأي كتلة",
+    "back": "Se la carta grigia (documento di immatricolazione del veicolo) è priva del valore della massa rimorchiabile, ciò significa che il veicolo è idoneo a trainare rimorchi di qualsiasi massa",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "إذا كانت قيمة الكتلة القابلة للقطر غائبة في البطاقة الرمادية (وثيقة تسجيل المركبة)، فهذا يعني أن المركبة صالحة لقطر مقطورات من أي كتلة",
+    "back": "Se il valore della massa rimorchiabile è assente nella carta grigia (documento di immatricolazione del veicolo), ciò significa che il veicolo è idoneo a trainare rimorchi di qualsiasi massa",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "إذا كانت قيمة الكتلة القابلة للقطر غائبة في البطاقة الرمادية (وثيقة تسجيل المركبة)، فهذا يعني أن المركبة صالحة لقطر مقطورات من أي كتلة",
+    "back": "Se il valore della massa rimorchiabile è assente nella carta grigia (documento di immatricolazione del veicolo), ciò significa che il veicolo è idoneo a rimorchiare rimorchi di qualsiasi massa",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   }
+  ]
+ },
+ "q-24130": {
+  "it": "Quando si traina un rimorchio occorre verificare che il carico verticale gravante sul gancio non ecceda il limite indicato dal costruttore",
+  "history": [
+   {
+    "round": 0,
+    "translation": "عند جر مقطورة يجب التحقق من أن الحمل العمودي الواقع على الخطاف لا يتجاوز الحد المبيّن من طرف الصانع",
+    "problems": [
+     "variant t1: negation: source has 1, back-translation has 0",
+     "variant t1: atmost: source [] vs back-translation ['ATMOST']",
+     "variant t1: more: source ['ecceda'] vs back-translation []",
+     "variant t2: negation: source has 1, back-translation has 0",
+     "variant t2: atmost: source [] vs back-translation ['ATMOST']",
+     "variant t2: more: source ['ecceda'] vs back-translation []",
+     "variant t3: negation: source has 1, back-translation has 0",
+     "variant t3: atmost: source [] vs back-translation ['ATMOST']",
+     "variant t3: more: source ['ecceda'] vs back-translation []"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "عند قطر مقطورة، يجب التحقق من أن الحمولة العمودية الواقعة على الخطاف لا تتجاوز الحد الذي حدده الصانع",
+    "back": "Quando si traina un rimorchio, bisogna verificare che il carico verticale che grava sul gancio non superi il limite fissato dal costruttore",
+    "problems": [
+     "negation: source has 1, back-translation has 0",
+     "atmost: source [] vs back-translation ['ATMOST']",
+     "more: source ['ecceda'] vs back-translation []"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "عند قطر مقطورة، يجب التحقق من أن الحمولة العمودية الواقعة على الخطاف لا تتعدى الحد الذي حدده الصانع",
+    "back": "Quando si traina un rimorchio, si deve verificare che il carico verticale che grava sul gancio non superi il limite stabilito dal costruttore",
+    "problems": [
+     "negation: source has 1, back-translation has 0",
+     "atmost: source [] vs back-translation ['ATMOST']",
+     "more: source ['ecceda'] vs back-translation []"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "عند قطر مقطورة يجب التحقق من أن الحمل العمودي الواقع على الخطاف لا يتعدى الحد الذي يحدده الصانع",
+    "back": "Quando si rimorchia un rimorchio si deve verificare che il carico verticale che grava sul gancio non superi il limite stabilito dal costruttore",
+    "problems": [
+     "negation: source has 1, back-translation has 0",
+     "atmost: source [] vs back-translation ['ATMOST']",
+     "more: source ['ecceda'] vs back-translation []"
+    ]
+   }
+  ]
+ },
+ "q-24250": {
+  "it": "L'uso dei proiettori a luce abbagliante è necessario, fuori dei centri abitati, quando l'illuminazione pubblica manca e non si incrociano altri veicoli",
+  "history": [
+   {
+    "round": 0,
+    "translation": "استعمال المصابيح الأمامية ذات الضوء العالي ضروري، خارج التجمعات العمرانية، عندما تكون الإنارة العمومية غائبة ولا تتقاطع مع مركبات أخرى",
+    "problems": [
+     "variant t2: negation: source has 1, back-translation has 2",
+     "variant t3: negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "استعمال الأضواء العالية ضروري، خارج التجمعات العمرانية، عندما تكون الإنارة العمومية غائبة ولا يتم الالتقاء بمركبات أخرى",
+    "back": "L'uso delle luci abbaglianti è necessario, fuori dai centri abitati, quando l'illuminazione pubblica è assente e non si incrociano altri veicoli",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "استعمال الأضواء العالية ضروري، خارج التجمعات العمرانية، عندما تكون الإنارة العمومية غائبة ولا يتم الالتقاء بمركبات أخرى",
+    "back": "L'uso delle luci abbaglianti è necessario, fuori dai centri abitati, quando l'illuminazione pubblica è assente e non si incrociano altri veicoli",
+    "problems": [
+     "negation: source has 1, back-translation has 2"
+    ]
+   }
+  ]
+ },
+ "q-24534": {
+  "it": "La patente di categoria B1 abilita a condurre le autovetture monoposto, o con un massimo di tre posti, compreso il conducente, purché si circoli senza passeggeri a bordo",
+  "history": [
+   {
+    "round": 0,
+    "translation": "تخوّل رخصة السياقة من صنف B1 سياقة السيارات الخاصة ذات المقعد الواحد، أو ذات ثلاثة مقاعد على الأكثر بما فيها مقعد السائق، شريطة السير دون ركاب على متنها",
+    "problems": [
+     "variant t1: atmost: source [] vs back-translation ['ATMOST']",
+     "variant t2: atmost: source [] vs back-translation ['ATMOST']",
+     "variant t3: atmost: source [] vs back-translation ['ATMOST']"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "رخصة السياقة من صنف B1 تخوّل سياقة السيارات الخاصة ذات المقعد الواحد، أو ذات ثلاثة مقاعد كحد أقصى، بما فيها مقعد السائق، شريطة السير دون ركاب على متنها",
+    "back": "La patente di guida di categoria B1 abilita alla guida delle autovetture private a un posto, o a tre posti al massimo, compreso il posto del conducente, a condizione di circolare senza passeggeri a bordo",
+    "problems": [
+     "atmost: source [] vs back-translation ['ATMOST']"
+    ]
+   },
+   {
+    "round": 2,
+    "translation": "تخوّل رخصة السياقة صنف B1 قيادة السيارات الخاصة ذات المقعد الواحد، أو التي بها بحد أقصى 3 مقاعد، بما فيها مقعد السائق، شريطة السير دون ركاب على متنها",
+    "back": "La patente di guida categoria B1 abilita alla guida di autovetture a un solo posto, o con al massimo 3 posti, compreso il posto del conducente, a condizione di circolare senza passeggeri a bordo",
+    "problems": [
+     "atmost: source [] vs back-translation ['ATMOST']"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "رخصة السياقة من صنف B1 تخوّل سياقة السيارات الخاصة ذات المقعد الواحد، أو ذات ثلاثة مقاعد كحد أقصى، بما في ذلك مقعد السائق، شريطة السير دون ركاب على متنها",
+    "back": "La patente di guida di categoria B1 abilita alla guida di autovetture private a un solo posto, o al massimo a tre posti, compreso il posto del conducente, a condizione di circolare senza passeggeri a bordo",
+    "problems": [
+     "atmost: source [] vs back-translation ['ATMOST']"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "تخوّل رخصة السياقة من صنف B1 سياقة السيارات الخاصة ذات المقعد الواحد، أو ذات ثلاثة مقاعد كحد أقصى، بما في ذلك السائق، شريطة السير بدون ركاب على متنها",
+    "back": "La patente di guida di categoria B1 abilita a guidare automobili private a un solo posto, oppure a tre posti al massimo, compreso il conducente, a condizione di circolare senza passeggeri a bordo",
+    "problems": [
+     "atmost: source [] vs back-translation ['ATMOST']"
+    ]
+   }
+  ]
+ },
+ "q-24753": {
+  "it": "In caso di nebbia fitta è opportuno evitare di fermarsi sulla carreggiata, se non per cause di forza maggiore",
+  "history": [
+   {
+    "round": 0,
+    "translation": "في حالة الضباب الكثيف من المناسب تفادي التوقف على قارعة الطريق، إلا لسبب قاهر",
+    "problems": [
+     "variant t1: negation: source has 1, back-translation has 0",
+     "variant t1: except: source [] vs back-translation ['tranne']",
+     "variant t1: if: source ['se'] vs back-translation []",
+     "variant t3: negation: source has 1, back-translation has 0",
+     "variant t3: except: source [] vs back-translation ['salvo']",
+     "variant t3: if: source ['se'] vs back-translation []"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "في حالة الضباب الكثيف، من المستحسن تجنب التوقف على قارعة الطريق، إلا لأسباب القوة القاهرة",
+    "back": "In caso di nebbia fitta, è consigliabile evitare di fermarsi sulla carreggiata, tranne che per motivi di forza maggiore",
+    "problems": [
+     "negation: source has 1, back-translation has 0",
+     "except: source [] vs back-translation ['tranne']",
+     "if: source ['se'] vs back-translation []"
+    ]
+   },
+   {
+    "round": 2,
+    "translation": "في حال الضباب الكثيف من المستحسن تجنب التوقف على قارعة الطريق، إلا لأسباب قاهرة",
+    "back": "In caso di nebbia fitta è consigliabile evitare di fermarsi sulla carreggiata, salvo che per cause di forza maggiore",
+    "problems": [
+     "negation: source has 1, back-translation has 0",
+     "except: source [] vs back-translation ['salvo']",
+     "if: source ['se'] vs back-translation []"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "في حالة الضباب الكثيف، من المستحسن تجنب التوقف على قارعة الطريق، إلا لأسباب قاهرة",
+    "back": "In caso di nebbia fitta, è consigliabile evitare di fermarsi sulla carreggiata, tranne che per cause di forza maggiore",
+    "problems": [
+     "negation: source has 1, back-translation has 0",
+     "except: source [] vs back-translation ['tranne']",
+     "if: source ['se'] vs back-translation []"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "في حالة الضباب الكثيف، يُستحسن تجنب التوقف على قارعة الطريق، إلا لأسباب قاهرة",
+    "back": "In caso di nebbia fitta, è preferibile evitare di fermarsi sulla carreggiata, tranne che per cause di forza maggiore",
+    "problems": [
+     "negation: source has 1, back-translation has 0",
+     "except: source [] vs back-translation ['tranne']",
+     "if: source ['se'] vs back-translation []"
+    ]
+   }
+  ]
+ },
+ "q-24874": {
+  "it": "Se un infortunato della strada ha una ferita sanguinante ed è incosciente, bisogna dargli da bere acqua o tè",
+  "history": [
+   {
+    "round": 0,
+    "translation": "إذا كان لدى مصاب على الطريق جرح ينزف وكان فاقدًا للوعي، يجب إعطاؤه ماء أو شايًا ليشرب",
+    "problems": [
+     "variant t1: negation: source has 0, back-translation has 1",
+     "variant t2: negation: source has 0, back-translation has 1",
+     "variant t3: negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "إذا كان مصاب في حادثة سير يعاني من جرح نازف وكان فاقدًا للوعي، يجب إعطاؤه ماءً أو شايًا ليشربه",
+    "back": "Se un ferito in un incidente stradale ha una ferita sanguinante ed è privo di sensi, gli si deve dare da bere acqua o tè",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "إذا كان مصاب في حادث سير لديه جرح ينزف وكان فاقدًا للوعي، يجب إعطاؤه ماءً أو شايًا ليشربه",
+    "back": "Se un ferito in un incidente stradale ha una ferita che sanguina ed è privo di conoscenza, gli si deve dare da bere acqua o tè",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   }
+  ]
+ },
+ "q-24906": {
+  "it": "Se un ferito della strada è in stato di incoscienza, bisogna verificare se respira ancora, mettendo una mano sulla parte laterale bassa del torace o sull'addome",
+  "history": [
+   {
+    "round": 0,
+    "translation": "إذا كان جريح على الطريق في حالة فقدان الوعي، يجب التحقق مما إذا كان لا يزال يتنفس، بوضع اليد على الجزء الجانبي السفلي من القفص الصدري أو على البطن",
+    "problems": [
+     "variant t1: less: source [] vs back-translation ['inferiore']",
+     "variant t2: negation: source has 0, back-translation has 1",
+     "variant t2: less: source [] vs back-translation ['inferiore']",
+     "variant t3: negation: source has 0, back-translation has 1",
+     "variant t3: less: source [] vs back-translation ['inferiore']"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "إذا كان مصاب في حادث سير في حالة فقدان الوعي، يجب التحقق مما إذا كان لا يزال يتنفس، بوضع يد على الجزء الجانبي السفلي من الصدر أو على البطن",
+    "back": "Se un infortunato di un incidente stradale è in stato di incoscienza, bisogna verificare se respira ancora, mettendo una mano sulla parte laterale inferiore del torace o sull'addome",
+    "problems": [
+     "less: source [] vs back-translation ['inferiore']"
+    ]
+   },
+   {
+    "round": 2,
+    "translation": "إذا كان مصاب الطريق فاقدًا للوعي، يجب التحقق مما إذا كان لا يزال يتنفس، بوضع يد على الجزء الجانبي السفلي من القفص الصدري أو على البطن",
+    "back": "Se l'infortunato della strada è privo di coscienza, bisogna verificare se respira ancora, ponendo una mano sulla parte laterale inferiore della gabbia toracica o sull'addome",
+    "problems": [
+     "negation: source has 0, back-translation has 1",
+     "less: source [] vs back-translation ['inferiore']"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "إذا كان جريح الطريق في حالة فقدان الوعي، يجب التحقق مما إذا كان مستمرًا في التنفس، بوضع يد على الجزء الجانبي الأسفل من القفص الصدري أو على البطن",
+    "back": "Se un infortunato della strada è privo di sensi, si deve verificare se continua a respirare, ponendo una mano sulla parte laterale inferiore della cassa toracica o sull'addome",
+    "problems": [
+     "negation: source has 0, back-translation has 1",
+     "less: source [] vs back-translation ['inferiore']"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "إذا كان جريح في حادث سير في حالة فقدان الوعي، يجب التحقق مما إذا كان مستمرًا في التنفس، بوضع يد على الجزء الجانبي السفلي من الصدر أو على البطن",
+    "back": "Se un ferito in un incidente stradale è in stato di perdita di conoscenza, si deve verificare se continua a respirare, ponendo una mano sulla parte laterale inferiore del torace o sull'addome",
+    "problems": [
+     "less: source [] vs back-translation ['inferiore']"
+    ]
+   }
+  ]
+ },
+ "q-25141": {
+  "it": "Per salvaguardare l'ambiente dall'inquinamento atmosferico, bisogna premere diverse volte e a fondo il pedale dell'acceleratore, affinché il veicolo raggiunga in fretta la temperatura di esercizio",
+  "history": [
+   {
+    "round": 0,
+    "translation": "لحماية البيئة من تلوث الجو، يجب الضغط على دواسة الوقود عدة مرات وإلى أقصى حد، حتى تصل المركبة بسرعة إلى درجة حرارة التشغيل",
+    "problems": [
+     "variant t1: more: source [] vs back-translation ['più']",
+     "variant t2: more: source [] vs back-translation ['più']",
+     "variant t3: negation: source has 0, back-translation has 1",
+     "variant t3: more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "لحماية البيئة من التلوث الجوي، يجب الضغط عدة مرات وبالكامل على دواسة التسارع، حتى تصل المركبة بسرعة إلى درجة حرارة التشغيل",
+    "back": "Per proteggere l'ambiente dall'inquinamento atmosferico, si deve premere più volte e a fondo il pedale dell'acceleratore, affinché il veicolo raggiunga rapidamente la temperatura di esercizio",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 2,
+    "translation": "لحماية البيئة من التلوث الجوي، يجب الضغط عدة مرات وإلى النهاية على دواسة الوقود، لكي تبلغ المركبة بسرعة درجة حرارة التشغيل",
+    "back": "Per proteggere l'ambiente dall'inquinamento atmosferico, bisogna premere più volte e fino in fondo il pedale dell'acceleratore, affinché il veicolo raggiunga rapidamente la temperatura di esercizio",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "للحفاظ على البيئة من التلوث الجوي، يجب الضغط على دواسة التسريع عدة مرات وحتى النهاية، كي تصل المركبة بسرعة إلى درجة حرارة التشغيل",
+    "back": "Per proteggere l'ambiente dall'inquinamento atmosferico, si deve premere più volte il pedale dell'acceleratore fino in fondo, affinché il veicolo raggiunga rapidamente la temperatura di esercizio",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "للحفاظ على البيئة من التلوث الجوي، يجب الضغط عدة مرات وإلى النهاية على دواسة التسريع، حتى تصل المركبة بسرعة إلى درجة حرارة التشغيل",
+    "back": "Per preservare l'ambiente dall'inquinamento atmosferico, si deve premere più volte e fino in fondo il pedale dell'acceleratore, affinché il veicolo raggiunga rapidamente la temperatura di esercizio",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   }
+  ]
+ },
+ "q-25277": {
+  "it": "In caso di principio d'incendio del veicolo, in mancanza di estintore, si può gettare sabbia o terra alla base delle fiamme",
+  "history": [
+   {
+    "round": 0,
+    "translation": "في حالة بداية حريق في المركبة، وعند عدم وجود مطفأة، يمكن رمي الرمل أو التراب على قاعدة اللهب",
+    "problems": [
+     "variant t1: negation: source has 0, back-translation has 1",
+     "variant t1: if: source [] vs back-translation ['se']",
+     "variant t2: negation: source has 0, back-translation has 1",
+     "variant t3: negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "في حالة بداية حريق في المركبة، وفي غياب مطفأة الحريق، يمكن رمي الرمل أو التراب على قاعدة اللهب",
+    "back": "In caso di principio di incendio nel veicolo, e in assenza dell'estintore, si può gettare sabbia o terra alla base delle fiamme",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 2,
+    "translation": "في حال بداية اشتعال في المركبة، وعند عدم وجود طفاية حريق، يمكن رمي الرمل أو التراب على قاعدة اللهب",
+    "back": "In caso di principio d'incendio nel veicolo, e in assenza di un estintore, si può gettare sabbia o terra alla base delle fiamme",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "في حالة بداية حريق في المركبة، وفي غياب مطفأة الحريق، يمكن رمي الرمل أو التراب على قاعدة اللهب",
+    "back": "In caso di principio di incendio nel veicolo, e in assenza dell'estintore, si può gettare sabbia o terra sulla base delle fiamme",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "في حالة بداية حريق في المركبة، وفي غياب مطفأة الحريق، يمكن رمي الرمل أو التراب على قاعدة اللهب",
+    "back": "In caso di principio di incendio nel veicolo, e in assenza dell'estintore, si può gettare sabbia o terra sulla base delle fiamme",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   }
+  ]
+ },
+ "q-25278": {
+  "it": "Dopo un incidente, se c'è un principio d'incendio del veicolo, in mancanza di estintore si può utilizzare una coperta bagnata per spegnere le fiamme",
+  "history": [
+   {
+    "round": 0,
+    "translation": "بعد حادثة، إذا كانت هناك بداية حريق في المركبة، وعند عدم وجود مطفأة، يمكن استعمال غطاء مبلل لإطفاء اللهب",
+    "problems": [
+     "variant t1: negation: source has 0, back-translation has 1",
+     "variant t2: negation: source has 0, back-translation has 1",
+     "variant t3: negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "بعد حادثة، إذا كانت هناك بداية حريق في المركبة، وفي غياب مطفأة الحريق، يمكن استعمال غطاء مبلل لإطفاء اللهب",
+    "back": "Dopo un incidente, se c'è un principio di incendio nel veicolo, e in assenza dell'estintore, si può usare una coperta bagnata per spegnere le fiamme",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 2,
+    "translation": "بعد حادث، إذا كانت هناك بداية اشتعال في المركبة، وعند عدم وجود طفاية حريق يمكن استخدام بطانية مبللة لإطفاء اللهب",
+    "back": "Dopo un incidente, se c'è un principio d'incendio nel veicolo, in assenza di un estintore si può usare una coperta bagnata per spegnere le fiamme",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "بعد حادثة، إذا كانت هناك بداية حريق في المركبة، يمكن في غياب مطفأة الحريق استعمال غطاء مبلل لإطفاء اللهب",
+    "back": "Dopo un incidente, se c'è un principio di incendio nel veicolo, in assenza dell'estintore si può usare una coperta bagnata per spegnere le fiamme",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "بعد حادث، إذا كانت هناك بداية حريق في المركبة، يمكن في غياب مطفأة الحريق استعمال غطاء مبلل لإطفاء اللهب",
+    "back": "Dopo un incidente, se c'è un principio di incendio nel veicolo, si può, in assenza dell'estintore, usare una coperta bagnata per spegnere le fiamme",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   }
+  ]
+ },
+ "q-25307": {
+  "it": "Le parti dell'impianto frenante maggiormente sollecitate dalle alte temperature sono le guarnizioni di attrito",
+  "history": [
+   {
+    "round": 0,
+    "translation": "أجزاء نظام الكبح الأكثر تعرضًا للحرارة المرتفعة هي بطانات الاحتكاك",
+    "problems": [
+     "variant t1: more: source [] vs back-translation ['più']",
+     "variant t2: more: source [] vs back-translation ['più']",
+     "variant t3: more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "أجزاء نظام الكبح الأكثر تعرضًا لدرجات الحرارة المرتفعة هي بطانات الاحتكاك",
+    "back": "Le parti dell'impianto frenante più esposte alle temperature elevate sono le guarnizioni di attrito",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 2,
+    "translation": "أجزاء منظومة الفرملة الأكثر تعرضًا للإجهاد بسبب درجات الحرارة المرتفعة هي بطانات الاحتكاك",
+    "back": "Le parti dell'impianto frenante più sollecitate a causa delle alte temperature sono le guarnizioni d'attrito",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "أجزاء نظام الكبح الأكثر تعرضًا للإجهاد بفعل درجات الحرارة المرتفعة هي بطانات الاحتكاك",
+    "back": "Le parti dell'impianto frenante più sollecitate dalle alte temperature sono i rivestimenti di attrito",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "أجزاء نظام الفرامل الأكثر تعرضًا لدرجات الحرارة المرتفعة هي بطانات الاحتكاك",
+    "back": "Le parti dell'impianto frenante più esposte a temperature elevate sono i rivestimenti d'attrito",
+    "problems": [
+     "more: source [] vs back-translation ['più']"
+    ]
+   }
+  ]
+ },
+ "q-25376": {
+  "it": "In un veicolo a motore, gli ammortizzatori scarichi provocano l'usura non uniforme del battistrada dei pneumatici",
+  "history": [
+   {
+    "round": 0,
+    "translation": "في المركبة ذات المحرك، ماصات الصدمات المستنفدة تسبب اهتراءً غير منتظم لنقوش الإطارات",
+    "problems": [
+     "variant t1: negation: source has 1, back-translation has 0",
+     "variant t2: negation: source has 1, back-translation has 0",
+     "variant t3: negation: source has 1, back-translation has 0"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "في المركبة ذات المحرك، تسبب ممتصات الصدمات المستهلكة تآكلًا غير منتظم لمداس الإطارات",
+    "back": "Nel veicolo a motore, gli ammortizzatori consumati causano un'usura irregolare del battistrada degli pneumatici",
+    "problems": [
+     "negation: source has 1, back-translation has 0"
+    ]
+   },
+   {
+    "round": 2,
+    "translation": "في مركبة ذات محرك، تتسبب ممتصات الصدمات المستهلكة في تآكل غير منتظم لمداس الإطارات",
+    "back": "In un veicolo a motore, gli ammortizzatori usurati causano un'usura irregolare del battistrada degli pneumatici",
+    "problems": [
+     "negation: source has 1, back-translation has 0"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "في المركبة ذات المحرك، تتسبب ممتصات الصدمات المستهلكة في تآكل غير منتظم لمداس الإطارات",
+    "back": "Nel veicolo a motore, gli ammortizzatori usurati causano un'usura irregolare del battistrada dei pneumatici",
+    "problems": [
+     "negation: source has 1, back-translation has 0"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "في مركبة ذات محرك، تتسبب ممتصات الصدمات المستهلكة في تآكل غير منتظم لمداس الإطارات",
+    "back": "In un veicolo a motore, gli ammortizzatori usurati causano un'usura irregolare del battistrada dei pneumatici",
+    "problems": [
+     "negation: source has 1, back-translation has 0"
+    ]
+   }
+  ]
+ },
+ "q-31041": {
+  "it": "Il comportamento degli altri utenti della strada è ininfluente per una guida sicura",
+  "history": [
+   {
+    "round": 0,
+    "translation": "سلوك مستعملي الطريق الآخرين عديم التأثير على السياقة الآمنة",
+    "problems": [
+     "variant t1: negation: source has 0, back-translation has 1",
+     "variant t2: negation: source has 0, back-translation has 1",
+     "variant t3: negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 1,
+    "translation": "سلوك مستعملي الطريق الآخرين عديم التأثير على السياقة الآمنة",
+    "back": "Il comportamento degli altri utenti della strada è privo di influenza sulla guida sicura",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 3,
+    "translation": "سلوك مستعملي الطريق الآخرين عديم التأثير على السياقة الآمنة",
+    "back": "Il comportamento degli altri utenti della strada è privo di influenza sulla guida sicura",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   },
+   {
+    "round": 4,
+    "translation": "سلوك مستعملي الطريق الآخرين عديم التأثير على السياقة الآمنة",
+    "back": "Il comportamento degli altri utenti della strada è privo di influenza sulla guida sicura",
+    "problems": [
+     "negation: source has 0, back-translation has 1"
+    ]
+   }
+  ]
+ }
+}

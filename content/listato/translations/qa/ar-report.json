@@ -1,0 +1,93 @@
+{
+ "step3": {
+  "disputed_after_back_translation": 353,
+  "mismatch_by_variant": {
+   "t1": 203,
+   "t2": 202,
+   "t3": 236
+  },
+  "chosen_from": {
+   "t1": 2185,
+   "t2": 3748,
+   "t3": 800
+  }
+ },
+ "step4": {
+  "audited": 6733,
+  "triple_audited": 153,
+  "audit_failed": 29,
+  "pattern_checks_added": 0,
+  "disputed_total": 380
+ },
+ "rounds": [
+  {
+   "round": 1,
+   "disputed_in": 380,
+   "resolved": 301,
+   "disputed_out": 79,
+   "marker_mismatch": 52,
+   "audit_failed": 1
+  },
+  {
+   "round": 2,
+   "disputed_in": 79,
+   "resolved": 24,
+   "disputed_out": 55,
+   "marker_mismatch": 23,
+   "audit_failed": 0
+  },
+  {
+   "round": 3,
+   "disputed_in": 55,
+   "resolved": 14,
+   "disputed_out": 41,
+   "marker_mismatch": 41,
+   "audit_failed": 0
+  },
+  {
+   "round": 4,
+   "disputed_in": 41,
+   "resolved": 14,
+   "disputed_out": 27,
+   "marker_mismatch": 27,
+   "audit_failed": 0
+  }
+ ],
+ "manual_decisions": [
+  {
+   "key": "u5787",
+   "it": "Con la patente di categoria A si possono condurre i motocicli (con o senza carrozzetta) di qualsiasi cilindrata, purché abbiano una potenza inferiore a 35 kW per i primi 2 anni dal conseguimento",
+   "translation": "برخصة السياقة (صنف A) يمكن قيادة الدراجات النارية (مع عربة جانبية أو بدونها) من أي سعة، شريطة أن تقل قدرتها عن 35 kW خلال السنتين (2) الأوليين من الحصول عليها",
+   "reason": "Arabic dual 'سنتين' (two years) kept, digit 2 added in brackets so numbers stay in Western digits"
+  },
+  {
+   "key": "u5789",
+   "it": "La patente di categoria A può essere conseguita con accesso graduale a 18 anni di età da chi è già titolare di patente A1 da almeno 2 anni",
+   "translation": "يمكن الحصول على رخصة السياقة (صنف A) بالوصول التدريجي في سن 18 سنة لمن يحمل بالفعل رخصة السياقة A1 منذ سنتين (2) على الأقل",
+   "reason": "Arabic dual 'سنتين' (two years) kept, digit 2 added in brackets so numbers stay in Western digits"
+  },
+  {
+   "key": "u5783",
+   "it": "La patente di categoria A può essere conseguita, con accesso diretto, da chi non è già titolare di patente A2 da almeno 2 anni, solo se ha compiuto 24 anni di età",
+   "translation": "يمكن الحصول على رخصة السياقة (صنف A) بالوصول المباشر، لمن لا يحمل رخصة السياقة A2 منذ سنتين (2) على الأقل، فقط إذا بلغ 24 سنة",
+   "reason": "Arabic dual 'سنتين' (two years) kept, digit 2 added in brackets so numbers stay in Western digits"
+  },
+  {
+   "key": "u5784",
+   "it": "La patente di categoria A può essere conseguita a 20 anni di età, con accesso graduale, da chi è titolare di patente A2 da almeno 2 anni",
+   "translation": "يمكن الحصول على رخصة السياقة (صنف A) في سن 20 سنة، بالوصول التدريجي، لمن يحمل رخصة السياقة A2 منذ سنتين (2) على الأقل",
+   "reason": "Arabic dual 'سنتين' (two years) kept, digit 2 added in brackets so numbers stay in Western digits"
+  },
+  {
+   "key": "u5791",
+   "it": "La patente di categoria A può essere conseguita con accesso diretto anche da chi non è già titolare di patente A2 da almeno 2 anni, purché abbia compiuto 21 anni di età",
+   "translation": "يمكن الحصول على رخصة السياقة (صنف A) بالوصول المباشر أيضًا لمن لا يحمل رخصة السياقة A2 منذ سنتين (2) على الأقل، شريطة أن يكون قد بلغ 21 سنة",
+   "reason": "Arabic dual 'سنتين' (two years) kept, digit 2 added in brackets so numbers stay in Western digits"
+  }
+ ],
+ "ids": 7020,
+ "units": 6733,
+ "published_ids": 6993,
+ "unresolved_ids": 27,
+ "unresolved_pct": 0.38
+}

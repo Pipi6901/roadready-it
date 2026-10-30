@@ -1,0 +1,125 @@
+{
+ "lang": "en",
+ "auto_initial": {
+  "missing": 0,
+  "number_problems": 1,
+  "italian_leftovers": {}
+ },
+ "negation_pass": {
+  "statements": 1124,
+  "ids": 1144,
+  "flagged": 5
+ },
+ "back_translation_sample": {
+  "ids": 150,
+  "discrepant_ids": 7,
+  "discrepancy_pct": 4.7,
+  "details": {
+   "u0159": {
+    "it": "Il segnale raffigurato indica una strada sterrata",
+    "tr_before": "The sign shown indicates an unpaved road",
+    "back_to_it": "Il segnale raffigurato indica una strada non asfaltata",
+    "problems": [
+     "back-translation: negation: source has 0, back-translation has 1"
+    ],
+    "tr_after": "The sign shown in the picture indicates an unpaved road",
+    "resolved": true
+   },
+   "u3270": {
+    "it": "La striscia a zig zag della segnaletica in figura serve agli autobus per facilitare la manovra di accostamento e per ripartire",
+    "tr_before": "The zigzag line of the road marking in the picture serves buses to make pulling in to the kerb and setting off again easier",
+    "back_to_it": "La linea a zigzag della segnaletica orizzontale in figura serve agli autobus per rendere più agevole l'accostamento al marciapiede e la ripartenza",
+    "problems": [
+     "back-translation: more: source [] vs back-translation ['più']"
+    ],
+    "tr_after": "The zig-zag line of the road markings in the picture serves buses to make it easier to pull in to the kerb and to set off again",
+    "resolved": true
+   },
+   "u3493": {
+    "it": "Nelle autostrade possono circolare solo gli autoveicoli",
+    "tr_before": "On motorways only motor vehicles may travel",
+    "back_to_it": "Sulle autostrade possono circolare soltanto i veicoli a motore",
+    "problems": [
+     "meaning_identical = false",
+     "'autoveicoli' (four-wheeled-type motor vehicles, excluding motorcycles) rendered as broad 'motor vehicles' (back-translation 'veicoli a motore'); generalisation changes the truth value since motorcycles also use motorways"
+    ],
+    "tr_after": "Only motor vehicles can travel on motorways",
+    "resolved": true
+   },
+   "u3919": {
+    "it": "La striscia bianca laterale discontinua in figura, delimita una piazzola di sosta",
+    "tr_before": "The broken white side line in the picture delimits a parking bay",
+    "back_to_it": "La linea laterale bianca discontinua in figura delimita uno stallo di sosta",
+    "problems": [
+     "meaning_identical = false",
+     "'piazzola di sosta' (lay-by / stopping area) rendered as 'parking bay' (back-translation 'stallo di sosta'), a different road element"
+    ],
+    "tr_after": "The broken white side line in the picture marks out a lay-by (piazzola di sosta)",
+    "resolved": true
+   },
+   "u5463": {
+    "it": "Nel rispetto della larghezza massima stabilita per i rimorchi T.A.T.S., le imbarcazioni trasportate possono sporgere fino a 50 centimetri per ogni lato rispetto ai bordi esterni delle luci di posizione posteriori",
+    "tr_before": "Within the maximum width established for T.A.T.S. trailers, the boats being carried may project up to 50 centimetres on each side beyond the outer edges of the rear position lights",
+    "back_to_it": "Entro la larghezza massima stabilita per i rimorchi T.A.T.S., le imbarcazioni trasportate possono sporgere fino a 50 centimetri per ciascun lato oltre i bordi esterni delle luci di posizione posteriori",
+    "problems": [
+     "back-translation: more: source [] vs back-translation ['oltre']"
+    ],
+    "tr_after": "Within the maximum width established for T.A.T.S. trailers, the boats carried may project up to 50 centimetres on each side beyond the outer edges of the rear position lights",
+    "resolved": true
+   },
+   "u6026": {
+    "it": "In caso di infossamento su neve o sabbia, non riuscendo a spostare il veicolo, è consigliabile inserire sotto la ruota che slitta qualcosa che faccia attrito (pezzi di legno, tappeti del veicolo, ecc.)",
+    "tr_before": "If the vehicle is bogged down in snow or sand and you cannot move it, it is advisable to put something that creates friction under the slipping wheel (pieces of wood, the vehicle's mats, etc.)",
+    "back_to_it": "Se il veicolo è impantanato nella neve o nella sabbia e non si riesce a muoverlo, è consigliabile mettere sotto la ruota che slitta qualcosa che crei attrito (pezzi di legno, i tappetini del veicolo, ecc.)",
+    "problems": [
+     "back-translation: if: source [] vs back-translation ['se']"
+    ],
+    "tr_after": "In case of getting stuck in snow or sand, being unable to move the vehicle, it is advisable to put something that provides grip (pieces of wood, the vehicle's mats, etc.) under the wheel that is slipping",
+    "resolved": true
+   },
+   "u6344": {
+    "it": "L'inquinamento atmosferico prodotto dai veicoli scompare del tutto accelerando a fondo, perché l'alta temperatura fa consumare in fretta il carburante",
+    "tr_before": "Atmospheric pollution produced by vehicles disappears completely by accelerating flat out, because the high temperature makes the fuel burn up quickly",
+    "back_to_it": "L'inquinamento atmosferico prodotto dai veicoli scompare completamente accelerando al massimo, perché l'alta temperatura fa bruciare rapidamente il carburante",
+    "problems": [
+     "back-translation: atmost: source [] vs back-translation ['ATMOST']"
+    ],
+    "tr_after": "The air pollution produced by vehicles disappears completely by accelerating hard, because the high temperature makes the fuel burn up quickly",
+    "resolved": true
+   }
+  }
+ },
+ "fix_rounds": [
+  {
+   "round": 1,
+   "in": 13,
+   "resolved": 10,
+   "out": 3
+  },
+  {
+   "round": 2,
+   "in": 3,
+   "resolved": 1,
+   "out": 2
+  },
+  {
+   "round": 3,
+   "in": 2,
+   "resolved": 1,
+   "out": 1
+  },
+  {
+   "round": 4,
+   "in": 1,
+   "resolved": 1,
+   "out": 0
+  }
+ ],
+ "remaining_flagged": {},
+ "final_auto": {
+  "entries": 7020,
+  "empty": 0,
+  "number_problems": 0,
+  "italian_leftovers": {}
+ }
+}

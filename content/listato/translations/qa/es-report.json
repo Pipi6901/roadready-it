@@ -1,0 +1,142 @@
+{
+ "lang": "es",
+ "auto_initial": {
+  "missing": 0,
+  "number_problems": 1,
+  "italian_leftovers": {}
+ },
+ "negation_pass": {
+  "statements": 1124,
+  "ids": 1144,
+  "flagged": 6
+ },
+ "back_translation_sample": {
+  "ids": 150,
+  "discrepant_ids": 8,
+  "discrepancy_pct": 5.3,
+  "details": {
+   "u0017": {
+    "it": "Il segnale raffigurato vieta agli autocarri di massa superiore a 3,5 t di proseguire diritto",
+    "tr_before": "La señal representada en la imagen prohíbe a los camiones de masa máxima autorizada superior a 3,5 t continuar recto",
+    "back_to_it": "Il segnale rappresentato nell'immagine vieta agli autocarri di massa massima autorizzata superiore a 3,5 t di proseguire diritto",
+    "problems": [
+     "meaning_identical = false",
+     "'masa máxima autorizada' adds 'máxima autorizada' not in source 'massa', narrowing the mass meaning"
+    ],
+    "tr_after": "La señal representada (en la imagen) prohíbe a los camiones de masa superior a 3,5 t seguir recto",
+    "resolved": true
+   },
+   "u0298": {
+    "it": "Il segnale raffigurato preavvisa di svoltare a destra per S. Giovanni",
+    "tr_before": "La señal representada en la imagen advierte de que hay que girar a la derecha hacia S. Giovanni",
+    "back_to_it": "Il segnale rappresentato nell'immagine avverte che bisogna svoltare a destra verso S. Giovanni",
+    "problems": [
+     "limiters_match = false",
+     "meaning_identical = false",
+     "'preavvisa di svoltare' (pre-announces the right turn) rendered 'advierte de que hay que girar' adding an obligation ('hay que')"
+    ],
+    "tr_after": "La señal representada (en la imagen) preavisa del giro a la derecha hacia S. Giovanni",
+    "resolved": true
+   },
+   "u2792": {
+    "it": "Il segnale raffigurato vieta il transito a veicoli sprovvisti di catene o pneumatici invernali",
+    "tr_before": "La señal representada en la imagen prohíbe el tránsito a vehículos sin cadenas o neumáticos de invierno",
+    "back_to_it": "Il segnale rappresentato nell'immagine vieta il transito ai veicoli senza catene o pneumatici invernali",
+    "problems": [
+     "back-translation: negation: source has 1, back-translation has 2"
+    ],
+    "tr_after": "La señal representada (en la imagen) prohíbe el tránsito a los vehículos desprovistos de cadenas o neumáticos de invierno",
+    "resolved": true
+   },
+   "u4015": {
+    "it": "Il pannello integrativo raffigurato indica un'officina meccanica per autotreni",
+    "tr_before": "El panel complementario representado indica un taller mecánico para tractocamiones",
+    "back_to_it": "Il pannello integrativo rappresentato indica un'officina meccanica per trattori stradali",
+    "problems": [
+     "meaning_identical = false",
+     "'autotreni' (truck with trailer) mistranslated as 'tractocamiones' (tractor units)"
+    ],
+    "tr_after": "El panel complementario representado (en la imagen) indica un taller mecánico para trenes de carretera (autotreni)",
+    "resolved": true
+   },
+   "u4557": {
+    "it": "In un centro abitato, quando un pedone, fuori delle strisce di attraversamento, non accenni a darci la precedenza, è necessario ridurre la velocità e, occorrendo, fermarsi per non investirlo",
+    "tr_before": "En un poblado, cuando un peatón, fuera de los pasos de peatones, no da señales de cedernos el paso, es necesario reducir la velocidad y, si es preciso, detenerse para no atropellarlo",
+    "back_to_it": "In un centro abitato, quando un pedone, fuori dagli attraversamenti pedonali, non dà segno di darci la precedenza, è necessario ridurre la velocità e, se necessario, fermarsi per non investirlo",
+    "problems": [
+     "back-translation: if: source [] vs back-translation ['se']"
+    ],
+    "tr_after": "En poblado, cuando un peatón, fuera del paso de peatones, no da muestras de cedernos el paso, es necesario reducir la velocidad y, en caso necesario, detenerse para no atropellarlo",
+    "resolved": true
+   },
+   "u5174": {
+    "it": "La sosta a meno di 15 metri dal segnale di fermata autobus, qualora gli spazi di stazionamento non siano delimitati, è consentita azionando la segnalazione luminosa di pericolo (quattro frecce lampeggianti simultaneamente)",
+    "tr_before": "El estacionamiento a menos de 15 metros de la señal de parada de autobuses, cuando los espacios de estacionamiento no estén delimitados, se permite accionando la señal luminosa de peligro (cuatro indicadores de dirección parpadeando simultáneamente)",
+    "back_to_it": "La sosta a meno di 15 metri dal segnale di fermata degli autobus, quando gli spazi di sosta non siano delimitati, è consentita azionando la segnalazione luminosa di pericolo (quattro indicatori di direzione lampeggianti contemporaneamente)",
+    "problems": [
+     "back-translation: if: source ['qualora'] vs back-translation []"
+    ],
+    "tr_after": "El estacionamiento a menos de 15 metros de la señal de parada de autobús, en caso de que los espacios de estacionamiento no estén delimitados, está permitido accionando la señalización luminosa de peligro (cuatro intermitentes simultáneamente)",
+    "resolved": true
+   },
+   "u5353": {
+    "it": "Risulta facile al conducente di un autoveicolo valutare la distanza che lo separa da un ciclomotorista che rallenta bruscamente per svoltare in una strada non sufficientemente segnalata",
+    "tr_before": "Resulta fácil para el conductor de un automóvil valorar la distancia que lo separa de un conductor de ciclomotor que reduce bruscamente la velocidad para girar a una vía insuficientemente señalizada",
+    "back_to_it": "È facile per il conducente di un'automobile valutare la distanza che lo separa da un conducente di ciclomotore che riduce bruscamente la velocità per svoltare in una strada insufficientemente segnalata",
+    "problems": [
+     "back-translation: negation: source has 1, back-translation has 0"
+    ],
+    "tr_after": "Al conductor de un automóvil le resulta fácil valorar la distancia que lo separa de un conductor de ciclomotor que reduce bruscamente la velocidad para girar hacia una vía no suficientemente señalizada",
+    "resolved": true
+   },
+   "u5480": {
+    "it": "Durante la marcia, il rimorchio deve avere il ruotino pivottante di manovra abbassato (poggiato al suolo)",
+    "tr_before": "Durante la marcha, el remolque debe tener la rueda pivotante de maniobra levantada (no apoyada en el suelo)",
+    "back_to_it": "Durante la marcia, il rimorchio deve avere la ruota pivotante di manovra sollevata (non appoggiata a terra)",
+    "problems": [
+     "negations_match = false",
+     "meaning_identical = false",
+     "'abbassato (poggiato al suolo)' reversed to 'levantada (no apoyada en el suelo)': lowered/resting on ground became raised/not resting, adds negation 'no'",
+     "back-translation: negation: source has 0, back-translation has 1"
+    ],
+    "tr_after": "Durante la marcha, el remolque debe tener la rueda pivotante de maniobra bajada (apoyada en el suelo)",
+    "resolved": true
+   }
+  }
+ },
+ "fix_rounds": [
+  {
+   "round": 1,
+   "in": 15,
+   "resolved": 14,
+   "out": 1
+  },
+  {
+   "round": 2,
+   "in": 1,
+   "resolved": 0,
+   "out": 1
+  },
+  {
+   "round": 3,
+   "in": 1,
+   "resolved": 0,
+   "out": 1
+  }
+ ],
+ "manual_decisions": [
+  {
+   "key": "u3877",
+   "it": "La striscia di mezzo in figura non consente il sorpasso in ogni caso",
+   "translation": "La línea central de la imagen no permite el adelantamiento en ningún caso",
+   "reason": "auditor read 'non ... in ogni caso' as 'not in every case'; the ministry's official French text has 'n'autorise en aucun cas le dépassement' (in no case), so 'en ningún caso' is kept"
+  }
+ ],
+ "remaining_flagged": {},
+ "final_auto": {
+  "entries": 7020,
+  "empty": 0,
+  "number_problems": 0,
+  "italian_leftovers": {}
+ }
+}

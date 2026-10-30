@@ -1,0 +1,94 @@
+{
+ "lang": "ro",
+ "auto_initial": {
+  "missing": 0,
+  "number_problems": 0,
+  "italian_leftovers": {}
+ },
+ "negation_pass": {
+  "statements": 1124,
+  "ids": 1144,
+  "flagged": 8
+ },
+ "back_translation_sample": {
+  "ids": 150,
+  "discrepant_ids": 5,
+  "discrepancy_pct": 3.3,
+  "details": {
+   "u0560": {
+    "it": "Il segnale raffigurato indica, su strade a carreggiate separate, la presenza di un cavalcavia per effettuare l'inversione di marcia",
+    "tr_before": "Indicatorul din imagine indică, pe drumurile cu părți carosabile separate, prezența unui viaduct pentru efectuarea întoarcerii",
+    "back_to_it": "Il segnale in figura indica, sulle strade con carreggiate separate, la presenza di un viadotto per effettuare l'inversione di marcia",
+    "problems": [
+     "meaning_identical = false",
+     "'cavalcavia' (overpass) rendered as 'viaduct' (viaduct/valley bridge), object of the sign changed"
+    ],
+    "tr_after": "Indicatorul din imagine semnalează, pe drumurile cu părți carosabile separate, prezența unui pasaj superior pentru efectuarea întoarcerii",
+    "resolved": true
+   },
+   "u1991": {
+    "it": "Il segnale raffigurato è un segnale generico di pericolo",
+    "tr_before": "Indicatorul din imagine este un indicator general de avertizare",
+    "back_to_it": "Il segnale in figura è un segnale generico di avvertimento",
+    "problems": [
+     "meaning_identical = false",
+     "'segnale generico di pericolo' rendered as 'indicator general de avertizare' (general warning sign); 'pericol' dropped, can read as the whole warning-sign category instead of the specific generic-danger sign"
+    ],
+    "tr_after": "Indicatorul din imagine este un indicator generic de pericol",
+    "resolved": true
+   },
+   "u2892": {
+    "it": "Il segnale raffigurato preannuncia una cunetta",
+    "tr_before": "Indicatorul din imagine anunță din timp o rigolă (denivelare în jos)",
+    "back_to_it": "Il segnale in figura annuncia in anticipo una cunetta (dislivello verso il basso)",
+    "problems": [
+     "meaning_identical = false",
+     "'cunetta' rendered as 'rigolă' (gutter/drain channel) with an added gloss '(denivelare în jos)'; base term wrong and explanation added"
+    ],
+    "tr_after": "Indicatorul din imagine anunță o adâncitură a părții carosabile (cunetta)",
+    "resolved": true
+   },
+   "u4770": {
+    "it": "Negli incroci regolati con circolazione rotatoria, in assenza di specifico segnale, vale la regola generale di dare la precedenza a destra",
+    "tr_before": "La intersecțiile reglementate cu sens giratoriu, în lipsa unui indicator specific, se aplică regula generală de a acorda prioritate vehiculelor din dreapta",
+    "back_to_it": "Agli incroci regolati a rotatoria, in mancanza di un segnale specifico, si applica la regola generale di dare la precedenza ai veicoli da destra",
+    "problems": [
+     "back-translation: negation: source has 1, back-translation has 0"
+    ],
+    "tr_after": "La intersecțiile reglementate cu sens giratoriu, în lipsa unui indicator specific, se aplică regula generală de a acorda prioritate vehiculelor din dreapta",
+    "resolved": true
+   },
+   "u6027": {
+    "it": "In caso di infossamento su neve o sabbia, non riuscendo a partire con la prima marcia è opportuno innestare una marcia superiore",
+    "tr_before": "În caz de înfundare în zăpadă sau nisip, dacă nu se reușește plecarea cu treapta întâi, este oportun să se cupleze o treaptă superioară",
+    "back_to_it": "In caso di insabbiamento nella neve o nella sabbia, se non si riesce a partire con la prima marcia, è opportuno innestare una marcia superiore",
+    "problems": [
+     "back-translation: if: source [] vs back-translation ['se']"
+    ],
+    "tr_after": "În caz de împotmolire în zăpadă sau nisip, nereușind să porniți în treapta întâi, este indicat să cuplați o treaptă superioară",
+    "resolved": true
+   }
+  }
+ },
+ "fix_rounds": [
+  {
+   "round": 1,
+   "in": 13,
+   "resolved": 11,
+   "out": 2
+  },
+  {
+   "round": 2,
+   "in": 2,
+   "resolved": 2,
+   "out": 0
+  }
+ ],
+ "remaining_flagged": {},
+ "final_auto": {
+  "entries": 7020,
+  "empty": 0,
+  "number_problems": 0,
+  "italian_leftovers": {}
+ }
+}

@@ -1,0 +1,21 @@
+# Remarks on the Italian source
+
+Obvious typos noticed by the translators. Every one was still translated literally.
+
+| id | Italian | Remark |
+|---|---|---|
+| q-21521 | Il segnale raffigurato, se barrato, da una striscia rossa indica la fine di una strada extraurbana principale | Misplaced comma: 'se barrato, da una striscia rossa' should be 'se barrato da una striscia rossa,' |
+| q-18995 | Nella curve pericolose preannunciate dal segnale raffigurato è vietato il sorpasso se la carreggiata è a due corsie e a doppio senso di circolazione | 'Nella curve' should be 'Nelle curve' |
+| q-19050 | In presenza del segnale raffigurato è consentito sostare in corrispondenza o in prossimità dei passaggi a livelli | 'passaggi a livelli' should be 'passaggi a livello' |
+| q-22984 | Il conducente del veicolo E in figura, muovendosi in retromarcia per immettersi nella circolazione, deve azionare gli indicatori di direzione | Vehicle letter 'E' while all sibling statements of this figure use 'S'; likely typo for 'S'; Vehicle letter E likely a typo for S (all neighbouring statements refer to vehicle S) |
+| q-21308 | Il segnale raffigurato indica cha mancano 54 chilometri dallo svincolo d'uscita per Piacenza | 'cha' should be 'che'; Typo 'cha' instead of 'che' |
+| q-21865 | La barriere segnalano un percorso ciclabile | 'La barriere' article/noun mismatch (should be 'Le barriere' or 'La barriera'); 'La barriere' should be 'Le barriere'; Article mismatch 'La barriere' instead of 'Le barriere'; Article/noun agreement typo: 'La barriere' should be 'Le barriere' (or 'La barriera'). |
+| q-22204 | Il presenza del segnale raffigurato il conducente deve moderare la velocità per la possibile presenza di autocarri in lento movimento | "Il presenza" should be "In presenza"; 'Il presenza' should be 'In presenza' |
+| q-23949 | Il pannello arancione retroriflettente riprodott0 in figura è collocato posteriormente per segnalare carichi sporgenti pericolosi | 'riprodott0' has digit zero instead of letter 'o' (riprodotto); Typo 'riprodott0' (zero instead of 'o') for 'riprodotto'; Typo: 'riprodott0' (zero instead of 'o') should be 'riprodotto'; typo 'riprodott0' (digit zero instead of letter o) for 'riprodotto' |
+| q-24440 | I guanti da motociclisti possono avere imbottiture diverse a seconde della stagione | "a seconde" should be "a seconda"; 'a seconde della stagione' should be 'a seconda della stagione' |
+| q-24612 | La revoca della patente può essere disposta quando il conducente guida senza averla con sè | "con sè" should be "con sé" (accent typo) |
+| q-24633 | La sospensione della patente può essere disposta quando si circola senza avere con sè la patente di guida | "con sè" should be "con sé" (accent typo) |
+| q-24757 | In caso di nebbia fitta è opportuno circolare con le sole luci di posizioni accese | 'luci di posizioni' should be 'luci di posizione' |
+| q-25452 | Sui motocicli, il livello del l'olio motore deve essere controllato con il motore in funzione al minimo e la moto sistemata sul cavalletto | "del l'olio" has a stray space (should be "dell'olio"); "del l'olio" should be "dell'olio"; "del l'olio" should be "dell'olio" (stray space); Stray space in "l'olio" written as "del l'olio" (typo, no change in meaning); spacing typo 'del l'olio' (should be 'dell'olio') |
+| q-31058 | Se si è stato di ebbrezza lieve, si riesce a guidare comunque in sicurezza | "Se si è stato di ebbrezza lieve" is garbled (should be "Se si è in stato di ebbrezza lieve"); "Se si è stato di ebbrezza lieve" should be "Se si è in stato di ebbrezza lieve" (missing 'in'); "Se si è stato di ebbrezza lieve" should read "Se si è in stato di ebbrezza lieve"; "Se si è stato di ebbrezza" should be "Se si è in stato di ebbrezza"; 'Se si è stato di ebbrezza' missing 'in' (should be 'Se si è in stato di ebbrezza'); Source has 'è stato di ebbrezza' instead of 'in stato di ebbrezza' (typo) |
+| q-31022 | Durante la guida il conducente deve prestare attenzione, sia a gli utenti che si trovano davanti al proprio veicolo, sia a coloro che si trovano ai bordi della strada | "a gli utenti" has a stray space (should be "agli utenti"); "a gli utenti" should be "agli utenti"; "a gli" should be "agli" (stray space); "sia a gli utenti" should be "sia agli utenti" (stray space); spacing typo 'a gli utenti' (should be 'agli utenti') |

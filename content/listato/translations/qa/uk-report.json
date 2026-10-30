@@ -1,0 +1,185 @@
+{
+ "lang": "uk",
+ "auto_initial": {
+  "missing": 0,
+  "number_problems": 1,
+  "italian_leftovers": {}
+ },
+ "negation_pass": {
+  "statements": 1124,
+  "ids": 1144,
+  "flagged": 16
+ },
+ "back_translation_sample": {
+  "ids": 150,
+  "discrepant_ids": 12,
+  "discrepancy_pct": 8.0,
+  "details": {
+   "u3038": {
+    "it": "Le luci rosse accese lampeggianti in figura obbligano a non superare la striscia trasversale d'arresto",
+    "tr_before": "Увімкнені червоні миготливі вогні, зображені на малюнку, зобов'язують не перетинати поперечну лінію зупинки",
+    "back_to_it": "Le luci rosse lampeggianti accese, raffigurate in figura, obbligano a non oltrepassare la linea trasversale di arresto",
+    "problems": [
+     "back-translation: negation: source has 0, back-translation has 1",
+     "back-translation: atmost: source ['ATMOST'] vs back-translation []"
+    ],
+    "tr_after": "Увімкнені миготливі червоні вогні на малюнку зобов'язують не переїжджати поперечну стоп-лінію",
+    "resolved": true
+   },
+   "u3800": {
+    "it": "Il conducente deve fermarsi per concedere la precedenza al pedone sordocieco che, con il bastone bianco-rosso, attraversa la strada fuori dalle strisce pedonali",
+    "tr_before": "Водій повинен зупинитися, щоб дати дорогу глухонімому незрячому пішоходу, який з біло-червоною тростиною переходить дорогу поза пішохідним переходом",
+    "back_to_it": "Il conducente deve fermarsi per dare la precedenza a un pedone sordomuto non vedente che, con un bastone bianco e rosso, attraversa la strada fuori dall'attraversamento pedonale",
+    "problems": [
+     "meaning_identical = false",
+     "sordocieco (deaf-blind) rendered as \"глухонімому незрячому\" (deaf-mute blind), adds muteness",
+     "back-translation: negation: source has 0, back-translation has 1"
+    ],
+    "tr_after": "Водій повинен зупинитися, щоб дати дорогу сліпоглухому пішоходу, який з біло-червоною тростиною переходить дорогу поза пішохідним переходом",
+    "resolved": true
+   },
+   "u4162": {
+    "it": "E' obbligatorio ridurre la velocità e all'occorrenza fermarsi quando i pedoni, che sono sul percorso, tardano a scansarsi",
+    "tr_before": "Зменшувати швидкість і за потреби зупинятися, коли пішоходи, що знаходяться на шляху, повільно звільняють дорогу, обов'язково",
+    "back_to_it": "Ridurre la velocità e, se necessario, fermarsi quando i pedoni che si trovano sul percorso liberano lentamente la strada è obbligatorio",
+    "problems": [
+     "back-translation: if: source [] vs back-translation ['se']"
+    ],
+    "tr_after": "Обов'язково знижувати швидкість і за потреби зупинятися, коли пішоходи, які перебувають на шляху руху, зволікають і не відходять убік",
+    "resolved": true
+   },
+   "u4345": {
+    "it": "Nel caso in cui, per un guasto alla propria autovettura, si rimane bloccati sulla sede ferroviaria di un passaggio a livello, occorre svuotare rapidamente il serbatoio per evitare incendi in caso di collisione col treno",
+    "tr_before": "Якщо через несправність власного легкового автомобіля ви залишилися заблокованими на залізничному полотні залізничного переїзду, слід швидко спорожнити бак, щоб уникнути пожежі у разі зіткнення з потягом",
+    "back_to_it": "Se a causa di un guasto della propria autovettura si è rimasti bloccati sulla sede ferroviaria del passaggio a livello, bisogna svuotare rapidamente il serbatoio, per evitare un incendio in caso di urto con il treno",
+    "problems": [
+     "back-translation: if: source [] vs back-translation ['se']"
+    ],
+    "tr_after": "У разі, коли через несправність власного легкового автомобіля ви застрягли на коліях залізничного переїзду, потрібно швидко спорожнити паливний бак, щоб уникнути пожежі в разі зіткнення з потягом",
+    "resolved": true
+   },
+   "u4350": {
+    "it": "Nel caso in cui un veicolo rimanga fermo tra le barriere chiuse del passaggio a livello, unico obbligo del conducente è quello di spegnere il motore e invitare eventuali passeggeri a scendere dal veicolo",
+    "tr_before": "Якщо транспортний засіб зупинився між опущеними шлагбаумами залізничного переїзду, єдиний обов'язок водія полягає в тому, щоб вимкнути двигун і запропонувати можливим пасажирам вийти з транспортного засобу",
+    "back_to_it": "Se il veicolo si è fermato tra le barriere abbassate del passaggio a livello, l'unico obbligo del conducente consiste nello spegnere il motore e invitare gli eventuali passeggeri a scendere dal veicolo",
+    "problems": [
+     "back-translation: if: source [] vs back-translation ['se']"
+    ],
+    "tr_after": "У разі, коли транспортний засіб залишається нерухомим між закритими шлагбаумами залізничного переїзду, єдиним обов'язком водія є заглушити двигун і запропонувати пасажирам, якщо вони є, вийти з транспортного засобу",
+    "resolved": true
+   },
+   "u4580": {
+    "it": "Quando ad un incrocio urbano, al segnale di via libera, il veicolo che precede tarda a riprendere la marcia, è opportuno suonare insistentemente per sollecitare il conducente a rimettersi in moto",
+    "tr_before": "Коли на міському перехресті, за сигналом дозволу руху, транспортний засіб, що їде попереду, не поспішає рушати, доцільно наполегливо сигналити, щоб підганяти водія рушати",
+    "back_to_it": "Quando a un'intersezione urbana, al segnale di via libera, il veicolo che precede non si affretta a partire, è opportuno suonare insistentemente il clacson per sollecitare il conducente a partire",
+    "problems": [
+     "back-translation: negation: source has 0, back-translation has 1"
+    ],
+    "tr_after": "Коли на перехресті в населеному пункті, при сигналі, що дозволяє рух, транспортний засіб попереду зволікає з відновленням руху, доцільно наполегливо сигналити, щоб спонукати водія рушити",
+    "resolved": true
+   },
+   "u4582": {
+    "it": "Quando ad un incrocio urbano, al segnale di via libera, il veicolo che precede tarda a riprendere la marcia, è opportuno tirare il freno a mano e scendere per cercare un agente del traffico che prenda i dovuti provvedimenti",
+    "tr_before": "Коли на міському перехресті, за сигналом дозволу руху, транспортний засіб, що їде попереду, не поспішає рушати, доцільно потягнути ручне гальмо і вийти шукати регулювальника, який вжив би необхідних заходів",
+    "back_to_it": "Quando a un'intersezione urbana, al segnale di via libera, il veicolo che precede non si affretta a partire, è opportuno tirare il freno a mano e scendere a cercare un agente del traffico che prenda i provvedimenti necessari",
+    "problems": [
+     "back-translation: negation: source has 0, back-translation has 1"
+    ],
+    "tr_after": "Коли на перехресті в населеному пункті, при сигналі, що дозволяє рух, транспортний засіб попереду зволікає з відновленням руху, доцільно затягнути стоянкове гальмо і вийти, щоб знайти регулювальника, який вжив би належних заходів",
+    "resolved": true
+   },
+   "u4694": {
+    "it": "Di norma, è consentito viaggiare per file parallele lungo il tratto di strada che porta ad un incrocio regolato da agenti del traffico",
+    "tr_before": "Як правило, дозволено їхати в кілька паралельних рядів ділянкою дороги, що веде до перехрестя, регульованого регулювальниками",
+    "back_to_it": "Di regola, è consentito circolare su più file parallele nel tratto di strada che conduce a un'intersezione regolata da agenti del traffico",
+    "problems": [
+     "back-translation: more: source [] vs back-translation ['più']"
+    ],
+    "tr_after": "Як правило, дозволено рухатися паралельними рядами на ділянці дороги, що веде до перехрестя, рух на якому регулюють регулювальники",
+    "resolved": true
+   },
+   "u4695": {
+    "it": "In condizioni di traffico intenso su carreggiata a senso unico a tre corsie, come in figura, è consentito viaggiare per file parallele",
+    "tr_before": "За умов інтенсивного руху на проїзній частині з одностороннім рухом і трьома смугами, як на малюнку, дозволено їхати в кілька паралельних рядів",
+    "back_to_it": "In condizioni di traffico intenso, sulla carreggiata a senso unico con tre corsie, come in figura, è consentito circolare su più file parallele",
+    "problems": [
+     "back-translation: more: source [] vs back-translation ['più']"
+    ],
+    "tr_after": "В умовах інтенсивного руху на проїзній частині з одностороннім рухом із трьома смугами руху, як на малюнку, дозволено рухатися паралельними рядами",
+    "resolved": true
+   },
+   "u4696": {
+    "it": "Percorrendo una carreggiata a senso unico la svolta a sinistra si effettua immettendosi in una corsia qualsiasi, se si viaggia per file parallele",
+    "tr_before": "Рухаючись проїзною частиною з одностороннім рухом, поворот ліворуч виконують, виїжджаючи на будь-яку смугу, якщо рухаються в кілька паралельних рядів",
+    "back_to_it": "Circolando su una carreggiata a senso unico, la svolta a sinistra si esegue immettendosi su una qualsiasi corsia, se si circola su più file parallele",
+    "problems": [
+     "back-translation: more: source [] vs back-translation ['più']"
+    ],
+    "tr_after": "Під час руху проїзною частиною з одностороннім рухом поворот ліворуч виконують, виїжджаючи на будь-яку смугу руху, якщо рух відбувається паралельними рядами",
+    "resolved": true
+   },
+   "u5143": {
+    "it": "La sosta è vietata se si impedisce l'accesso ad altro veicolo già regolarmente in sosta",
+    "tr_before": "Стоянка заборонена, якщо вона перешкоджає виїзду іншого транспортного засобу, що вже правильно стоїть",
+    "back_to_it": "La sosta è vietata se impedisce l'uscita di un altro veicolo già regolarmente in sosta",
+    "problems": [
+     "meaning_identical = false",
+     "\"impedisce l accesso ad altro veicolo\" (blocks access to another vehicle) rendered as \"перешкоджає виїзду\" (blocks the exit/leaving of another vehicle)"
+    ],
+    "tr_after": "Стоянка заборонена, якщо це перешкоджає доступу до іншого транспортного засобу, який уже правомірно стоїть на стоянці",
+    "resolved": true
+   },
+   "u6719": {
+    "it": "Le norme di circolazione sono stabilite per garantire una maggior sicurezza di guida per tutti gli utenti della strada",
+    "tr_before": "Правила дорожнього руху встановлені для забезпечення більшої безпеки руху для всіх учасників дорожнього руху",
+    "back_to_it": "Le norme di circolazione stradale sono stabilite per garantire una maggiore sicurezza della circolazione per tutti gli utenti della strada",
+    "problems": [
+     "back-translation: more: source [] vs back-translation ['maggiore']"
+    ],
+    "tr_after": "Правила дорожнього руху встановлено для забезпечення більшої безпеки керування для всіх учасників дорожнього руху",
+    "resolved": true
+   }
+  }
+ },
+ "fix_rounds": [
+  {
+   "round": 1,
+   "in": 29,
+   "resolved": 27,
+   "out": 2
+  },
+  {
+   "round": 2,
+   "in": 2,
+   "resolved": 0,
+   "out": 2
+  },
+  {
+   "round": 3,
+   "in": 2,
+   "resolved": 1,
+   "out": 1
+  }
+ ],
+ "manual_decisions": [
+  {
+   "key": "u3877",
+   "it": "La striscia di mezzo in figura non consente il sorpasso in ogni caso",
+   "translation": "Середня лінія на малюнку в жодному разі не дозволяє обгін",
+   "reason": "'у кожному випадку' could read as 'not in every case'; aligned with the ministry's official French 'n'autorise en aucun cas' (in no case)"
+  },
+  {
+   "key": "u2403",
+   "it": "Lungo le strade dove è posto, il segnale raffigurato vale 24 ore su 24",
+   "translation": "Уздовж доріг, де він встановлений, зображений на малюнку знак діє 24 години на добу",
+   "reason": "'24 ore su 24' is the idiom 'round the clock'; '24 години на добу' keeps the meaning, the number check only expected the digit 24 twice"
+  }
+ ],
+ "remaining_flagged": {},
+ "final_auto": {
+  "entries": 7020,
+  "empty": 0,
+  "number_problems": 1,
+  "italian_leftovers": {}
+ }
+}
