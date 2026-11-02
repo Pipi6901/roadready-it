@@ -26,7 +26,7 @@ import { Platform } from 'react-native';
  * "#2009 encodingFailed … fallback.json … unauthorized", nothing about a key.
  */
 export const ADAPTY_PUBLIC_KEY = Platform.select({
-  ios: 'REPLACE_WITH_ADAPTY_IT_IOS_PUBLIC_KEY',
+  ios: 'public_live_slxU8mCO.DBuKUuQLtqxIYw0nS7Hf',
   android: 'REPLACE_WITH_ADAPTY_IT_ANDROID_PUBLIC_KEY',
   default: '',
 })!;
@@ -57,3 +57,13 @@ export const ONBOARDING_CONFIGURED =
  * to the dashboard's Placement ID field.
  */
 export const ONBOARDING_PLACEMENT_ID = 'roadready_it_onboarding';
+
+/**
+ * The id of the custom action on the last screen's button in the flow.
+ *
+ * In the flow builder: select that button → Action → Custom action → this id,
+ * typed by hand. The flow reports it through onCustomAction and the app moves
+ * on to the paywall. A flow's own close button is handled as well, so a
+ * mistyped id does not trap anyone — it just shows up in analytics as 'closed'.
+ */
+export const ONBOARDING_FINISH_ACTION = 'onboarding_done';
