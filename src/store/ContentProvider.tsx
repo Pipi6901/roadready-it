@@ -7,6 +7,7 @@ import { topicName } from '@/features/i18n/topicNames';
 import { translate } from '@/features/i18n/useT';
 import type { StringKey } from '@/features/i18n/strings';
 import { LESSON_SIZE } from '@/constants/rules';
+import { drawVaried, spreadFigures } from '@/features/practice/lessonOrder';
 import {
   questionAppliesTo,
   questionCategory,
@@ -171,14 +172,22 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
 
     const questionsForTopic = (topicId: string) => bank.filter((q) => q.topicId === topicId);
 
-    const shuffled = (source: Question[], count: number) => {
-      const copy = [...source];
-      for (let i = copy.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [copy[i], copy[j]] = [copy[j], copy[i]];
+    // A topic's lessons are cut from this order, not from the ministry's: the
+    // listato hangs ten statements off each picture, so in its own order a
+    // lesson is one sign ten times over. The re-sequencing is deterministic, so
+    // lesson N holds the same cards on every visit; it is cached because every
+    // lesson screen asks for its slice and the pass walks the whole topic.
+    const lessonOrder = new Map<string, Question[]>();
+    const orderedTopic = (topicId: string) => {
+      let ordered = lessonOrder.get(topicId);
+      if (!ordered) {
+        ordered = spreadFigures(questionsForTopic(topicId));
+        lessonOrder.set(topicId, ordered);
       }
-      return copy.slice(0, count);
+      return ordered;
     };
+
+    const shuffled = (source: Question[], count: number) => drawVaried(source, count);
 
     return {
       country,
@@ -196,7 +205,7 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
       },
       questionsForTopic,
       lessonQuestions: (topicId, lessonIndex) =>
-        questionsForTopic(topicId)
+        orderedTopic(topicId)
           .slice(lessonIndex * LESSON_SIZE, lessonIndex * LESSON_SIZE + LESSON_SIZE)
           .map(decorate),
       // Quick Quiz draws from the whole bank, which is what the exam does from

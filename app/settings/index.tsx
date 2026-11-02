@@ -35,8 +35,15 @@ const VOICE_SPEED_MINOR_TICKS = [0.625, 0.875, 1.125, 1.375, 1.625, 1.875];
 
 /** Sizes are only ever shown to help judge a download, so one decimal is plenty. */
 function formatSize(bytes: number): string {
+  // Nothing downloaded reads as nothing, not as the "1 KB" a floor of one
+  // kilobyte would print next to "0 of 407 figures".
+  if (bytes <= 0) return '0 KB';
   if (bytes < 1024 * 1024) return `${Math.max(1, Math.round(bytes / 1024))} KB`;
-  if (bytes < 1024 * 1024 * 1024) return `${Math.round(bytes / (1024 * 1024))} MB`;
+  if (bytes < 1024 * 1024 * 1024) {
+    // The whole figure pack is a few megabytes, so "2 MB" for 2.4 hides most of the sum.
+    const mb = bytes / (1024 * 1024);
+    return `${mb < 10 ? mb.toFixed(1) : Math.round(mb)} MB`;
+  }
   return `${(bytes / (1024 * 1024 * 1024)).toFixed(1)} GB`;
 }
 
