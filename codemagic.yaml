@@ -30,7 +30,10 @@ workflows:
   ios-testflight:
     name: iOS — TestFlight
     instance_type: mac_mini_m2
-    max_build_duration: 60
+    # React Native is built from source (Adapty 4 needs dynamic frameworks, and
+    # Expo 57's prebuilt React Native cannot be reached from them), which adds
+    # a good deal of compile time over the prebuilt path.
+    max_build_duration: 120
 
     environment:
       groups:
