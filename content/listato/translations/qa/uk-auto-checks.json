@@ -1,0 +1,12 @@
+{
+ "entries": 7020,
+ "expected": 7020,
+ "unknown_ids": [],
+ "empty": [],
+ "number_problems": {
+  "q-19941": [
+   "numbers missing in translation: ['24']"
+  ]
+ },
+ "italian_leftovers": {}
+}
